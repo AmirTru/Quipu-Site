@@ -1,11 +1,11 @@
 
-$(function () {
-    $.scrollify({
-        section: ".s-scroll",
-        easing: "linear",
-        scrollSpeed: 4000,
-    });
-});
+// $(function () {
+//     $.scrollify({
+//         section: ".s-scroll",
+//         easing: "linear",
+//         scrollSpeed: 4000,
+//     });
+// });
 
 
 particlesJS("stars",
