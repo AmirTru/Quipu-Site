@@ -122,7 +122,7 @@ particlesJS("stars",
 
 $('.start-your-journey-btn').on('click', function () {
     window.pJSDom[0].pJS.particles.move.speed = 1;
-    window.pJSDom[0].pJS.particles.move.straight = 'true';
+    window.pJSDom[0].pJS.particles.move.straight = true;
 
     console.log(window.pJSDom[0].pJS.particles.array.length);
 
