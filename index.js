@@ -121,7 +121,7 @@ particlesJS("stars",
     });
 
 $('.start-your-journey-btn').on('click', function () {
-
+    window.pJSDom[0].pJS.particles.move.speed = 4000;
     console.log(window.pJSDom[0].pJS.particles.array.length);
 
 });
