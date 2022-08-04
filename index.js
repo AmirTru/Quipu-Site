@@ -122,6 +122,6 @@ particlesJS("stars",
 
 $('.start-your-journey-btn').on('click', function () {
 
-    pJS.fn.canvasClear();
+    console.log(window.pJSDom[0].pJS.particles.array.length);
 
 });
