@@ -123,8 +123,8 @@ particlesJS("stars",
 $('.start-your-journey-btn').on('click', function () {
     window.pJSDom[0].pJS.particles.move.speed = 1;
     window.pJSDom[0].pJS.particles.move.straight = true;
-   //window.pJSDom[0].pJS.fn.particlesRefresh();
-
+    window.pJSDom[0].pJS.particles.color.value = "#b61924";
+    
     console.log(window.pJSDom[0].pJS.particles.array.length);
 
 });
