@@ -68,7 +68,7 @@ particlesJS("stars",
                 "speed": 0.2,
                 "direction": "top",
                 "random": false,
-                "straight": true,
+                "straight": false,
                 "out_mode": "out",
                 "bounce": false,
                 "attract": {
