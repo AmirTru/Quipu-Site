@@ -79,7 +79,7 @@ particlesJS("stars",
             }
         },
         "interactivity": {
-            "detect_on": "window",
+            "detect_on": "canvas",
             "events": {
                 "onhover": {
                     "enable": false,
@@ -121,10 +121,14 @@ particlesJS("stars",
     });
 
 $('.start-your-journey-btn').on('click', function () {
-    window.pJSDom[0].pJS.particles.move.speed = 1;
-    window.pJSDom[0].pJS.particles.move.straight = true;
-    window.pJSDom[0].pJS.particles.color.value = "#b61924";
-    
+    for (var i = 0; i < 50; i++) {
+        (function (index) {
+            setTimeout(function () {
+                window.pJSDom[0].pJS.particles.move.speed = index;
+            }, index * 50);
+        })(i);
+    }
+
     console.log(window.pJSDom[0].pJS.particles.array.length);
 
 });
