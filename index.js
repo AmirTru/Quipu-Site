@@ -2,7 +2,7 @@
 $(function () {
     $.scrollify({
         section: ".s-scroll",
-        sectionName : ".the-process-wrapper",
+        sectionName: ".the-process-wrapper",
         easing: "linear",
         scrollSpeed: 4000,
     });
@@ -132,11 +132,11 @@ function movingFromHeader() {
     for (var i = 0; i < 30; i++) {
         (function (index) {
             setTimeout(function () {
-                window.pJSDom[0].pJS.particles.move.speed = 0.04060386061506725 * (index*4);
+                window.pJSDom[0].pJS.particles.move.speed = 0.04060386061506725 * (index * 5);
             }, index * 50);
         })(i);
     }
-    window.pJSDom[0].pJS.fn.particlesRefresh();
- //  console.log(window.pJSDom[0].pJS.particles.array.length);
+ //   window.pJSDom[0].pJS.fn.particlesRefresh();
+    //  console.log(window.pJSDom[0].pJS.particles.array.length);
 }
 
