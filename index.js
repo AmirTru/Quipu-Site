@@ -136,7 +136,7 @@ function movingFromHeader() {
             }, index * 50);
         })(i);
     }
- //   window.pJSDom[0].pJS.fn.particlesRefresh();
+    window.pJSDom[0].pJS.fn.particlesRefresh();
     //  console.log(window.pJSDom[0].pJS.particles.array.length);
 }
 
