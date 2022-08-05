@@ -123,16 +123,20 @@ particlesJS("stars",
 
 $('.start-your-journey-btn').on('click', function () {
     $.scrollify.move("#2");
+    movingFromHeader();
+});
 
+
+function movingFromHeader() {
     window.pJSDom[0].pJS.particles.move.straight = true;
-    window.pJSDom[0].pJS.fn.particlesRefresh();
+    // window.pJSDom[0].pJS.fn.particlesRefresh();
     for (var i = 0; i < 30; i++) {
         (function (index) {
             setTimeout(function () {
-                window.pJSDom[0].pJS.particles.move.speed = index / 1.5;
+                window.pJSDom[0].pJS.particles.move.speed = index / 1.2;
             }, index * 50);
         })(i);
     }
-
     console.log(window.pJSDom[0].pJS.particles.array.length);
-});
+}
+
