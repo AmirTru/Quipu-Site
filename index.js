@@ -126,7 +126,7 @@ $('.start-your-journey-btn').on('click', function () {
     for (var i = 0; i < 30; i++) {
         (function (index) {
             setTimeout(function () {
-                window.pJSDom[0].pJS.particles.move.speed = index / 2;
+                window.pJSDom[0].pJS.particles.move.speed = index / 1.5;
             }, index * 50);
         })(i);
     }
