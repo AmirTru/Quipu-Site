@@ -1,8 +1,8 @@
 
 $(function () {
     $.scrollify({
-        section: ".s-scroll",
-        sectionName : ".the-process-wrapper",
+        sectionName: ".s-scroll",
+        section : ".the-process-wrapper",
         easing: "linear",
         scrollSpeed: 4000,
     });
