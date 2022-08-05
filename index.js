@@ -2,7 +2,7 @@
 $(function () {
     $.scrollify({
         section: ".s-scroll",
-        sectionName : "the-process-wrapper",
+        sectionName : ".the-process-wrapper",
         easing: "linear",
         scrollSpeed: 4000,
     });
