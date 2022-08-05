@@ -129,7 +129,6 @@ $('.start-your-journey-btn').on('click', function () {
 
 function movingFromHeader() {
     window.pJSDom[0].pJS.particles.move.straight = true;
-    // window.pJSDom[0].pJS.fn.particlesRefresh();
     for (var i = 0; i < 30; i++) {
         (function (index) {
             setTimeout(function () {
@@ -137,6 +136,7 @@ function movingFromHeader() {
             }, index * 50);
         })(i);
     }
-    console.log(window.pJSDom[0].pJS.particles.array.length);
+    window.pJSDom[0].pJS.fn.particlesRefresh();
+ //  console.log(window.pJSDom[0].pJS.particles.array.length);
 }
 
