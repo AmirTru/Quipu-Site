@@ -7,7 +7,11 @@ $(function () {
         scrollSpeed: 4000,
         before: function(i,sscroll) {
 
-            console.log(i + sscroll);
+            console.log(i);
+
+            if (sscroll[i] == 1){
+                movingFromHeader();
+            }
 
         }
     });
