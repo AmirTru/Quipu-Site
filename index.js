@@ -122,7 +122,7 @@ particlesJS("stars",
     });
 
 $('.start-your-journey-btn').on('click', function () {
-    $.scrollify.move("#2");
+    $.scrollify.next();
     movingFromHeader();
 });
 
