@@ -154,7 +154,7 @@ function movingFromHeader() {
     for (var i = 0; i < 30; i++) {
         (function (index) {
             setTimeout(function () {
-                window.pJSDom[0].pJS.particles.move.speed = 0.1 * (index * 7);
+                window.pJSDom[0].pJS.particles.move.speed = 0.1 * (index * 4);
             }, index * 50);
         })(i);
     }
