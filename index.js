@@ -121,14 +121,15 @@ particlesJS("stars",
     });
 
 $('.start-your-journey-btn').on('click', function () {
-    for (var i = 0; i < 50; i++) {
+    window.pJSDom[0].pJS.particles.move.straight = true;
+    window.pJSDom[0].pJS.fn.particlesRefresh();
+    for (var i = 0; i < 30; i++) {
         (function (index) {
             setTimeout(function () {
-                window.pJSDom[0].pJS.particles.move.speed = index;
+                window.pJSDom[0].pJS.particles.move.speed = index / 2;
             }, index * 50);
         })(i);
     }
 
     console.log(window.pJSDom[0].pJS.particles.array.length);
-
 });
