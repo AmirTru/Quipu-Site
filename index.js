@@ -5,6 +5,11 @@ $(function () {
         sectionName: ".the-process-wrapper",
         easing: "linear",
         scrollSpeed: 4000,
+        before: function(i,sscroll) {
+
+            console.log(i + sscroll);
+
+        }
     });
 });
 
@@ -125,7 +130,6 @@ $('.start-your-journey-btn').on('click', function () {
     $.scrollify.next();
     movingFromHeader();
 });
-
 
 function movingFromHeader() {
     window.pJSDom[0].pJS.particles.move.straight = true;
