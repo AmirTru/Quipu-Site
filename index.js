@@ -14,7 +14,7 @@ $(function () {
     $.scrollify({
         section: ".s-scroll",
         easing: "linear",
-        scrollSpeed: 10,
+        scrollSpeed: 1000,
         before: function (i, sscroll) {
 
            // moveStart();
