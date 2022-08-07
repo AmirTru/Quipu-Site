@@ -3,13 +3,14 @@ const theProcess = $('.the-process-lottie');
 function moveStart() {
     theProcess.addClass('moving');
 
+}
+function moveEnd() {
+    theProcess.removeClass('moving');
+
     $('.dot').on('mouseenter', function () {
         console.log('dot')
         $(this).addClass('green');
     });
-}
-function moveEnd() {
-    theProcess.removeClass('moving');
 }
 
 
