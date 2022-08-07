@@ -50,7 +50,7 @@ $(function () {
             if (i == 1) {
                 movingToHeader();
                 var offset = $('.dot').eq(2).offset();
-                $('.process-text').offset({ top: offset.top, left: offset.left + 40 });
+                $('.process-text').offset({ top: offset.top.toEm(), left: offset.left.toEm() + 40 });
 
             }
             if (i == 2) {
@@ -216,10 +216,18 @@ $('.start-your-journey-btn').on('click', function () {
     $.scrollify.next();
 });
 
-function pxToEm(px) {
+//px to em
+$.fn.toEm = function(settings){
+    settings = jQuery.extend({
+        scope: 'body'
+    }, settings);
+    var that = parseInt(this[0],10),
+        scopeTest = jQuery('<div style="display: none; font-size: 1em; margin: 0; padding:0; height: auto; line-height: 1; border:0;">&nbsp;</div>').appendTo(settings.scope),
+        scopeVal = scopeTest.height();
+    scopeTest.remove();
+    return (that / scopeVal).toFixed(8) + 'em';
+};
 
-
-}
 
 $(window).resize(function () {
     var offset = $('.dot').eq(2).offset();
