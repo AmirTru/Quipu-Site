@@ -1,7 +1,7 @@
 const theProcess = $('.the-process-lottie');
 
-theProcess.on('mouseenter', function () {
-    console.log($(this).find('.dot').eq(this));
+theProcess.find('.dot').on('mouseenter', function () {
+    console.log(this);
 });
 //scrolling 
 $(function () {
