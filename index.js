@@ -22,6 +22,7 @@ $(function () {
             if (i == 1) {
                 movingFromHeader();
 
+
             }
             if (i == 2) {
 
@@ -48,6 +49,8 @@ $(function () {
             console.log('after' + i);
             if (i == 1) {
                 movingToHeader();
+                var offset = $('.dot').eq(0).offset();
+                $('.process-text').offset({ top: offset.top, left: offset.left });
 
             }
             if (i == 2) {
