@@ -15,29 +15,20 @@ $(function () {
                 movingFromHeader();
             }
             if (i == 2) {
-                theProcess.find('.dot').on('mouseenter mouseleave', function () {
-                    console.log(this);
-                });
+                var dots = theProcess.find('.dot');
+                console.log(dots);
             }
             if (i == 3) {
-                theProcess.find('.dot').on('mouseenter mouseleave', function () {
-                    console.log(this);
-                });
+
             }
             if (i == 4) {
-                theProcess.find('.dot').on('mouseenter mouseleave', function () {
-                    console.log(this);
-                });
+
             }
             if (i == 5) {
-                theProcess.find('.dot').on('mouseenter mouseleave', function () {
-                    console.log(this);
-                });
+
             }
             if (i == 6) {
-                theProcess.find('.dot').on('mouseenter mouseleave', function () {
-                    console.log(this);
-                });
+
             }
 
 
