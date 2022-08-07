@@ -5,10 +5,10 @@ theProcess.find('.dot').on('mouseenter mouseleave', function () {
 });
 
 function moveStart() {
-    $('.process-start').addClass('moving');
+    theProcess.addClass('moving');
 }
 function moveEnd() {
-    $('.process-start').removeClass('moving');
+    theProcess.removeClass('moving');
 }
 
 
