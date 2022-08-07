@@ -51,7 +51,7 @@ $(function () {
                 movingToHeader();
                 var offset = $('.dot').eq(2).offset();
                 console.log(offset.top + " " + offset.left);
-                $('.process-text').offset({ top: offset.top, left: offset.left });
+                $('.process-text').offset({ top: offset.top, left: offset.left + 20});
                 console.log("text" + $('.process-text').offset());
 
             }
@@ -217,5 +217,10 @@ $(document).on('mouseenter', '.dot', function () {
 $('.start-your-journey-btn').on('click', function () {
     $.scrollify.next();
 });
+
+function pxToEm(px){
+
+
+}
 
 
