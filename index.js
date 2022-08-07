@@ -50,7 +50,7 @@ $(function () {
             if (i == 1) {
                 movingToHeader();
                 var offset = $('.dot').eq(2).offset();
-                $('.process-text').offset({ top: offset.top+'em', left: offset.left + 40 });
+                $('.process-text').offset({ top: offset.top, left: offset.left});
                
             }
             if (i == 2) {
