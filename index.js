@@ -1,8 +1,12 @@
+const theProcess = $('.the-process-lottie');
+
+theProcess.on('mouseenter', function () {
+    console.log($(this).find('.dot').eq(this));
+});
 //scrolling 
 $(function () {
     $.scrollify({
         section: ".s-scroll",
-        sectionName: ".the-process-wrapper",
         easing: "linear",
         scrollSpeed: 4000,
         before: function (i, sscroll) {
@@ -13,7 +17,7 @@ $(function () {
 
         },
         after: function (i, sscroll) {
-           
+
             if (i == 1) {
                 movingToHeader();
             }
@@ -135,7 +139,7 @@ const PARTICLES_OPTIONS = {
 }
 
 particlesJS("stars", PARTICLES_OPTIONS
-    );
+);
 
 
 // stars handler  
