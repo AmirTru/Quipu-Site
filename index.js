@@ -4,11 +4,11 @@ theProcess.find('.dot').on('mouseenter mouseleave', function () {
     console.log(this);
 });
 
-function moveStart(){
-    theProcess.addClass('.moving');
+function moveStart() {
+    $('.process-start').addClass('.moving');
 }
-function moveEnd(){
-    theProcess.removeClass('.moving');
+function moveEnd() {
+    $('.process-start').removeClass('.moving');
 }
 
 
