@@ -244,7 +244,7 @@ function getCenterReadyToSet(dot) {
     var centerX = offset.left + width / 2;
     var centerY = offset.top + height / 2;
 
-    return { top: centerX, left: centerY };
+    return { top: centerY, left: centerX };
 
 }
 
