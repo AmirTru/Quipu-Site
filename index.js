@@ -153,10 +153,8 @@ function movingFromHeader() {
                 window.pJSDom[0].pJS.particles.move.speed = 0.1 * (index * 4);
             }, index * 50);
         })(i);
-
     }
-    //   window.pJSDom[0].pJS.fn.particlesRefresh();
-    //  console.log(window.pJSDom[0].pJS.particles.array.length);
+    window.pJSDom[0].pJS.fn.vendors.destroypJS;
 }
 
 //
