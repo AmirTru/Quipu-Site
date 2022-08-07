@@ -14,6 +14,33 @@ $(function () {
             if (i == 1) {
                 movingFromHeader();
             }
+            if (i == 2) {
+                theProcess.find('.dot').on('mouseenter mouseleave', function () {
+                    console.log(this);
+                });
+            }
+            if (i == 3) {
+                theProcess.find('.dot').on('mouseenter mouseleave', function () {
+                    console.log(this);
+                });
+            }
+            if (i == 4) {
+                theProcess.find('.dot').on('mouseenter mouseleave', function () {
+                    console.log(this);
+                });
+            }
+            if (i == 5) {
+                theProcess.find('.dot').on('mouseenter mouseleave', function () {
+                    console.log(this);
+                });
+            }
+            if (i == 6) {
+                theProcess.find('.dot').on('mouseenter mouseleave', function () {
+                    console.log(this);
+                });
+            }
+
+
 
         },
         after: function (i, sscroll) {
