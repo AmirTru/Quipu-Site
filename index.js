@@ -1,6 +1,7 @@
 const theProcess = $('.the-process-lottie');
 
 $('.dot').on('mouseenter', function () {
+    console.log('dot')
     this.addClass('green');
 });
 
