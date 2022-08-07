@@ -8,7 +8,7 @@ function moveEnd() {
     theProcess.removeClass('moving');
 
     //call on every page render
-    $('.dot').on('mouseenter', function () {
+    $('.dot').on('mouseenter','.process-start', function () {
  
       console.log($(this).position());
     });
