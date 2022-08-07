@@ -17,7 +17,7 @@ $(function () {
         scrollSpeed: 1000,
         before: function (i, sscroll) {
 
-          //  moveStart();
+            //  moveStart();
             console.log('before' + i);
             if (i == 1) {
                 movingFromHeader();
@@ -45,14 +45,12 @@ $(function () {
         },
         after: function (i, sscroll) {
 
-           // moveEnd();
+            // moveEnd();
             console.log('after' + i);
             if (i == 1) {
                 movingToHeader();
                 var offset = $('.dot').eq(2).offset();
-                console.log(offset.top + " " + offset.left);
-                $('.process-text').offset({ top: offset.top, left: offset.left + 40});
-                console.log("text" + $('.process-text').offset());
+                $('.process-text').offset({ top: offset.top, left: offset.left + 40 });
 
             }
             if (i == 2) {
@@ -218,9 +216,14 @@ $('.start-your-journey-btn').on('click', function () {
     $.scrollify.next();
 });
 
-function pxToEm(px){
+function pxToEm(px) {
 
 
 }
+
+$(window).resize(function () {
+    var offset = $('.dot').eq(2).offset();
+    $('.process-text').offset({ top: offset.top, left: offset.left + 40 });
+});
 
 
