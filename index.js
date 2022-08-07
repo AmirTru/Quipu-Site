@@ -6,14 +6,8 @@ function moveStart() {
 }
 function moveEnd() {
     theProcess.removeClass('moving');
-
-
 }
-//call on every page render
-$(document).on('mouseenter', '.dot', function () {
 
-    console.log($(this).position());
-});
 
 //scrolling 
 $(function () {
@@ -24,9 +18,10 @@ $(function () {
         before: function (i, sscroll) {
 
             moveStart();
-
+            console.log('before' + i);
             if (i == 1) {
                 movingFromHeader();
+
             }
             if (i == 2) {
 
@@ -50,7 +45,7 @@ $(function () {
         after: function (i, sscroll) {
 
             moveEnd();
-
+            console.log('after' + i);
             if (i == 1) {
                 movingToHeader();
 
@@ -209,7 +204,13 @@ function movingFromHeader() {
 }
 
 //
+//call on every page render
+$(document).on('mouseenter', '.dot', function () {
+    console.log($(this).position());
+});
+
 $('.start-your-journey-btn').on('click', function () {
     $.scrollify.next();
 });
+
 
