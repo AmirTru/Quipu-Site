@@ -51,7 +51,7 @@ $(function () {
                 movingToHeader();
                 var offset = $('.dot').eq(2).offset();
                 console.log(offset.top + " " + offset.left);
-                $('.process-text').offset({ top: offset.top, left: offset.left + 20});
+                $('.process-text').offset({ top: offset.top, left: offset.left + 40});
                 console.log("text" + $('.process-text').offset());
 
             }
