@@ -230,8 +230,7 @@ $.fn.toEm = function (settings) {
 
 
 $(window).resize(function () {
-    var offset = $('.dot').eq(2).offset();
-    $('.process-text').offset({ top: offset.top, left: offset.left });
+    $('.process-text').offset(getCenterReadyToSet($('.dot').eq(2)));
 });
 
 function getCenterReadyToSet(dot) {
