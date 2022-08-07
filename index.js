@@ -211,7 +211,7 @@ function movingFromHeader() {
 //
 //call on every page render
 $(document).on('mouseenter', '.dot', function () {
-    console.log($(this));
+    console.log($(this).index(this));
 });
 
 $('.start-your-journey-btn').on('click', function () {
