@@ -7,9 +7,10 @@ function moveStart() {
 function moveEnd() {
     theProcess.removeClass('moving');
 
+    //call on every page render
     $('.dot').on('mouseenter', function () {
-        console.log('dot')
-        $(this).addClass('green');
+ 
+      console.log($(this).position());
     });
 }
 
@@ -26,7 +27,6 @@ $(function () {
 
             if (i == 1) {
                 movingFromHeader();
-
             }
             if (i == 2) {
 
