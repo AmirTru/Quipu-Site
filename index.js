@@ -20,6 +20,8 @@ $(function () {
         scrollSpeed: 4000,
         before: function (i, sscroll) {
 
+            moveStart();
+
             if (i == 1) {
                 movingFromHeader();
 
@@ -44,6 +46,8 @@ $(function () {
 
         },
         after: function (i, sscroll) {
+
+            moveEnd();
 
             if (i == 1) {
                 movingToHeader();
