@@ -13,10 +13,11 @@ $(function () {
 
             if (i == 1) {
                 movingFromHeader();
-            }
-            if (i == 2) {
                 var dots = theProcess.find('.dot');
                 console.log(dots);
+            }
+            if (i == 2) {
+
             }
             if (i == 3) {
 
