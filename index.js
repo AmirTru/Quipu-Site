@@ -1,7 +1,7 @@
 const theProcess = $('.the-process-lottie');
 
 theProcess.find('.dot').on('mouseenter mouseleave', function () {
-    console.log(this.index());
+    console.log(index());
 });
 
 function moveStart() {
