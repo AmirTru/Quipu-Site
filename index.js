@@ -13,8 +13,7 @@ $(function () {
 
             if (i == 1) {
                 movingFromHeader();
-                var dots = theProcess.find('.dot');
-                console.log(dots);
+               
             }
             if (i == 2) {
 
@@ -39,6 +38,8 @@ $(function () {
 
             if (i == 1) {
                 movingToHeader();
+                var dots = theProcess.find('.dot');
+                console.log(dots);
             }
 
         }
