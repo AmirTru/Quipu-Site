@@ -49,9 +49,9 @@ $(function () {
             console.log('after' + i);
             if (i == 1) {
                 movingToHeader();
-                var offset = $('.dot').eq(2).offset();
-                $('.process-text').offset({ top: offset.top, left: offset.left});
-               
+               // var offset = $('.dot').eq(2).offset();
+                $('.process-text').offset(getCenterReadyToSet($('.dot').eq(2)));
+
             }
             if (i == 2) {
 
@@ -231,7 +231,20 @@ $.fn.toEm = function (settings) {
 
 $(window).resize(function () {
     var offset = $('.dot').eq(2).offset();
-    $('.process-text').offset({ top: offset.top, left: offset.left + 40 });
+    $('.process-text').offset({ top: offset.top, left: offset.left });
 });
 
+function getCenterReadyToSet(dot) {
+
+    var $this = dot;
+    var offset = $this.offset();
+    var width = $this.width();
+    var height = $this.height();
+
+    var centerX = offset.left + width / 2;
+    var centerY = offset.top + height / 2;
+
+    return { top: centerX, left: centerY };
+
+}
 
