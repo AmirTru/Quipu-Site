@@ -50,6 +50,7 @@ $(function () {
             if (i == 1) {
                 movingToHeader();
                 var offset = $('.dot').eq(0).offset();
+                console.log(offset.top + " " + offset.left);
                 $('.process-text').offset({ top: offset.top, left: offset.left });
 
             }
