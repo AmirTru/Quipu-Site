@@ -1,12 +1,12 @@
 const theProcess = $('.the-process-lottie');
 
-$('.dot').on('mouseenter', function () {
-    console.log('dot')
-    $(this).addClass('green');
-});
-
 function moveStart() {
     theProcess.addClass('moving');
+
+    $('.dot').on('mouseenter', function () {
+        console.log('dot')
+        $(this).addClass('green');
+    });
 }
 function moveEnd() {
     theProcess.removeClass('moving');
