@@ -41,6 +41,26 @@ $(function () {
                 var dots = theProcess.find('.dot');
                 console.log(dots);
             }
+            if (i == 2) {
+                movingToHeader();
+                var dots = theProcess.find('.dot');
+                console.log(dots);
+            }
+            if (i == 3) {
+                movingToHeader();
+                var dots = theProcess.find('.dot');
+                console.log(dots);
+            }
+            if (i == 4) {
+                movingToHeader();
+                var dots = theProcess.find('.dot');
+                console.log(dots);
+            }
+            if (i == 5) {
+                movingToHeader();
+                var dots = theProcess.find('.dot');
+                console.log(dots);
+            }
 
         }
     });
