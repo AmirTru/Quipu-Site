@@ -49,7 +49,7 @@ $(function () {
             console.log('after' + i);
             if (i == 1) {
                 movingToHeader();
-                var offset = $('.dot').eq(0).position();
+                var offset = $('.dot').eq(1).offset();
                 console.log(offset.top + " " + offset.left);
                 $('.process-text').offset({ top: offset.top, left: offset.left });
                 console.log("text" + $('.process-text').offset());
