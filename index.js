@@ -17,7 +17,7 @@ $(function () {
         scrollSpeed: 1000,
         before: function (i, sscroll) {
 
-            moveStart();
+          //  moveStart();
             console.log('before' + i);
             if (i == 1) {
                 movingFromHeader();
@@ -45,13 +45,13 @@ $(function () {
         },
         after: function (i, sscroll) {
 
-            moveEnd();
+           // moveEnd();
             console.log('after' + i);
             if (i == 1) {
                 movingToHeader();
                 var offset = $('.dot').eq(2).offset();
                 console.log(offset.top + " " + offset.left);
-                $('.process-text').offset({ top: offset.top, left: offset.left + 40%});
+                $('.process-text').offset({ top: offset.top, left: offset.left + 40});
                 console.log("text" + $('.process-text').offset());
 
             }
