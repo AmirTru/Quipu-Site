@@ -1,6 +1,6 @@
 const theProcess = $('.the-process-lottie');
 
-theProcess.find('.dot').on('mouseenter', function () {
+theProcess.find('.dot').on('mouseenter mouseleave', function () {
     console.log(this);
 });
 //scrolling 
