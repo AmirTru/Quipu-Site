@@ -244,8 +244,10 @@ function getCenterReadyToSet(dot) {
     // var centerX = offset.left + width / 2;
     // var centerY = offset.top + height / 2;
 
-    let centerX = dot.offsetLeft + dot.offsetWidth / 2;
-    let centerY = dot.offsetTop + dot.offsetHeight / 2;
+    const eye = dot;
+    const { left, top, width, height } = eye.getBoundingClientRect()
+    const centerX = left + width / 2
+    const centerY = top + height / 2
 
     return { top: centerY, left: centerX };
 
