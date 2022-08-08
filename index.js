@@ -239,8 +239,8 @@ function getCenterReadyToSet(getCenter, itemToMove) {
 
     var $this = getCenter;
     var offset = $this.offset();
-    var width = $this.width();
-    var height = $this.height();
+    var width = $this[0].getBoundingClientRect().width;
+    var height = $this[0].getBoundingClientRect().height;
 
     var centerX = offset.left + width / 2;
     var centerY = offset.top + height / 2;
