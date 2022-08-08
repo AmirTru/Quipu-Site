@@ -49,32 +49,29 @@ $(function () {
         after: function (i, sscroll) {
 
             moveEnd();
-            theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
-                // Do stuff after transition
-
-                console.log('after' + i);
+            console.log('after' + i);
 
 
-                if (i == 1) {
-
-
+            if (i == 1) {
+                theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
                     setToCenter($('.dot').eq(2), $('.process-text'));
+                });
 
-                }
-                if (i == 2) {
 
-                }
+            }
+            if (i == 2) {
 
-                if (i == 3) {
+            }
 
-                }
-                if (i == 4) {
+            if (i == 3) {
 
-                }
-                if (i == 5) {
+            }
+            if (i == 4) {
 
-                }
-            });
+            }
+            if (i == 5) {
+
+            }
 
         }
     });
