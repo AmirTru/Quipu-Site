@@ -50,8 +50,9 @@ $(function () {
             if (i == 1) {
                 movingToHeader();
                 // var offset = $('.dot').eq(2).offset();
-                $('.process-text').offset(getCenterReadyToSet($('.dot').eq(2)));
-                $('.dot-test').offset(getCenterReadyToSet($('.dot').eq(2)));
+                //$('.process-text').offset(getCenterReadyToSet($('.dot').eq(2)));
+                //$('.dot-test').offset(getCenterReadyToSet($('.dot').eq(2)));
+                getCenterReadyToSet('.dot', '.process-text');
 
             }
             if (i == 2) {
@@ -234,22 +235,19 @@ $(window).resize(function () {
     $('.process-text').offset(getCenterReadyToSet($('.dot').eq(2)));
 });
 
-function getCenterReadyToSet(dot) {
+function getCenterReadyToSet(getCenter, itemToMove) {
 
-    // var $this = dot;
-    // var offset = $this.offset();
-    // var width = $this.width();
-    // var height = $this.height();
+    var $this = getCenter;
+    var offset = $this.offset();
+    var width = $this.width();
+    var height = $this.height();
 
-    // var centerX = offset.left + width / 2;
-    // var centerY = offset.top + height / 2;
+    var centerX = offset.left + width / 2;
+    var centerY = offset.top + height / 2;
 
-    const eye = dot;
-    const { left, top, width, height } = eye[0].getBoundingClientRect();
-    const centerX = left + width / 2;
-    const centerY = top + height / 2;
-
-    return { top: centerX, left: centerY };
+    itemToMove.style.height = height;
+    itemToMove.offset({ top: centerY, left: centerX });
+    // return { top: centerY, left: centerX };
 
 }
 
