@@ -20,9 +20,10 @@ function moveStart(ref) {
         movingFromHeader();
     }
     if (ref === "research") {
-        theProcess.removeClass('research');
+        
     }
     if (ref === "branding") {
+        theProcess.removeClass('research');
     }
     if (ref === "briefing") {
     }
