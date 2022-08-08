@@ -1,25 +1,27 @@
 const theProcess = $('.the-process-lottie');
 
-function moveStart() {
+function moveStart(index) {
     theProcess.addClass('moving');
-
+    if (index == 0) {
+        movingToHeader();
+    }
+    if (index == 1) {
+        movingFromHeader();
+    }
+    if (index == 2) {
+        researchSectionOut();
+    }
 }
 function moveEnd(index) {
     theProcess.removeClass('moving');
     theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
         if (index == 0) {
-
-
-
         }
         if (index == 1) {
-            researchSectionIn()
-
+            researchSectionIn();
         }
     });
-
 }
-
 
 //scrolling 
 $(function () {
@@ -29,39 +31,15 @@ $(function () {
         scrollSpeed: 1000,
         before: function (i, sscroll) {
 
-            moveStart();
+            moveStart(i);
             console.log('before' + i);
-            if (i == 0) {
-                movingToHeader();
-            }
-            if (i == 1) {
-                movingFromHeader();
 
-
-            }
-            if (i == 2) {
-
-            }
-            if (i == 3) {
-
-            }
-            if (i == 4) {
-
-            }
-            if (i == 5) {
-
-            }
-            if (i == 6) {
-
-            }
 
 
 
         },
         after: function (i, sscroll) {
-
             moveEnd(i);
-
         }
     });
 });
@@ -243,7 +221,6 @@ function setToCenter(getCenter, itemToMove) {
 }
 
 function researchSectionIn() {
-
     //aling text to dot
     setToCenter($('.dot').eq(2), $('.process-text').eq(0));
     setToCenter($('.dot').eq(0), $('.process-text').eq(1));
@@ -252,5 +229,11 @@ function researchSectionIn() {
     $('.process-text').eq(0).removeClass('hide-process-text');
     $('.process-text').eq(1).removeClass('hide-process-text');
     $('.process-text').eq(2).removeClass('hide-process-text');
+}
+function researchSectionOut() {
+    //remove text
+    $('.process-text').eq(0).addClass('hide-process-text');
+    $('.process-text').eq(1).addClass('hide-process-text');
+    $('.process-text').eq(2).addClass('hide-process-text');
 }
 
