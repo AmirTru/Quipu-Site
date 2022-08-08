@@ -12,7 +12,7 @@ function moveStart(index) {
         movingFromHeader();
     }
     if (index == 2) {
-        researchSectionOut();
+    
     }
 }
 function moveEnd(index) {
