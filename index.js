@@ -37,8 +37,7 @@ function moveEnd(index) {
 
         if (index === "hero") {
         }
-        if (index === "process-starts") {
-           
+        if (index === "process-starts") {     
         }
         if (index === "research") {
             researchSectionIn();
@@ -65,6 +64,7 @@ $(function () {
         before: function (i, sscroll) {
             var ref = sscroll[i].attr("data-section-name");
             moveStart(ref);
+            console.log(ref)
         },
         after: function (i, sscroll) {
             var ref = sscroll[i].attr("data-section-name");
@@ -224,19 +224,6 @@ $(document).on('mouseenter', '.dot', function () {
 $('.start-your-journey-btn').on('click', function () {
     $.scrollify.next();
 });
-
-//px to em
-$.fn.toEm = function (settings) {
-    settings = jQuery.extend({
-        scope: 'body'
-    }, settings);
-    var that = parseInt(this[0], 10),
-        scopeTest = jQuery('<div style="display: none; font-size: 1em; margin: 0; padding:0; height: auto; line-height: 1; border:0;">&nbsp;</div>').appendTo(settings.scope),
-        scopeVal = scopeTest.height();
-    scopeTest.remove();
-    return (that / scopeVal).toFixed(8) + 'em';
-};
-
 
 $(window).resize(function () {
     setToCenter($('.dot').eq(2), $('.process-text'));
