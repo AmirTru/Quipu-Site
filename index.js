@@ -49,7 +49,7 @@ $(function () {
             console.log('after' + i);
             if (i == 1) {
                 movingToHeader();
-               // var offset = $('.dot').eq(2).offset();
+                // var offset = $('.dot').eq(2).offset();
                 $('.process-text').offset(getCenterReadyToSet($('.dot').eq(2)));
                 $('.dot-test').offset(getCenterReadyToSet($('.dot').eq(2)));
 
@@ -236,13 +236,16 @@ $(window).resize(function () {
 
 function getCenterReadyToSet(dot) {
 
-    var $this = dot;
-    var offset = $this.offset();
-    var width = $this.width();
-    var height = $this.height();
+    // var $this = dot;
+    // var offset = $this.offset();
+    // var width = $this.width();
+    // var height = $this.height();
 
-    var centerX = offset.left + width / 2;
-    var centerY = offset.top + height / 2;
+    // var centerX = offset.left + width / 2;
+    // var centerY = offset.top + height / 2;
+
+    let centerX = dot.offsetLeft + dot.offsetWidth / 2;
+    let centerY = dot.offsetTop + dot.offsetHeight / 2;
 
     return { top: centerY, left: centerX };
 
