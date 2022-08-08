@@ -41,6 +41,7 @@ $(function () {
         easing: "linear",
         scrollSpeed: 1000,
         before: function (i, sscroll) {
+            console.log(i);
 
             moveStart(i);
         },
