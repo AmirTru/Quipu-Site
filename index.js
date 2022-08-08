@@ -4,15 +4,15 @@ function moveStart(index) {
     theProcess.addClass('moving');
     $('.process-text').addClass('hide-process-text');
 
-    if ($.scrollify.current() == 0) {
+    if (index == 0) {
         movingToHeader();
         console.log('before 0')
     }
-    if ($.scrollify.current() == 1) {
+    if (index == 1) {
         movingFromHeader();
         console.log('before 1')
     }
-    if ($.scrollify.current() == 2) {
+    if (index == 2) {
         console.log('before 2')
     }
 }
@@ -20,14 +20,14 @@ function moveEnd(index) {
     theProcess.removeClass('moving');
     theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
 
-        if ($.scrollify.current() == 0) {
+        if (index == 0) {
             console.log('after 0')
         }
-        if ($.scrollify.current() == 1) {
+        if (index == 1) {
             researchSectionIn();
             console.log('after 1')
         }
-        if ($.scrollify.current() == 2) {
+        if (index == 2) {
             console.log('after 2')
         }
 
