@@ -249,7 +249,7 @@ function getCenterReadyToSet(dot) {
     const centerX = left + width / 2;
     const centerY = top + height / 2;
 
-    return { top: centerY, left: centerX };
+    return { top: centerX, left: centerY };
 
 }
 
