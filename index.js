@@ -10,44 +10,44 @@ development
 
 const theProcess = $('.the-process-lottie');
 
-function moveStart(index) {
+function moveStart(ref) {
     theProcess.addClass('moving');
 
-    if (index === "hero") {
+    if (ref === "hero") {
         movingToHeader();
     }
-    if (index === "process-starts") {
+    if (ref === "process-starts") {
         movingFromHeader();
     }
-    if (index === "research") {
+    if (ref === "research") {
     }
-    if (index === "branding") {
+    if (ref === "branding") {
     }
-    if (index === "briefing") {
+    if (ref === "briefing") {
     }
-    if (index === "design") {
+    if (ref === "design") {
     }
-    if (index === "development") {
+    if (ref === "development") {
     }
 }
-function moveEnd(index) {
+function moveEnd(ref) {
     theProcess.removeClass('moving');
     theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
 
-        if (index === "hero") {
+        if (ref === "hero") {
         }
-        if (index === "process-starts") {
+        if (ref === "process-starts") {
         }
-        if (index === "research") {
+        if (ref === "research") {
             researchSectionIn();
         }
-        if (index === "branding") {
+        if (ref === "branding") {
         }
-        if (index === "briefing") {
+        if (ref === "briefing") {
         }
-        if (index === "design") {
+        if (ref === "design") {
         }
-        if (index === "development") {
+        if (ref === "development") {
         }
 
 
@@ -206,10 +206,10 @@ function movingToHeader() {
 function movingFromHeader() {
     window.pJSDom[0].pJS.particles.move.straight = true;
     for (var i = 0; i < 30; i++) {
-        (function (index) {
+        (function (ref) {
             setTimeout(function () {
-                window.pJSDom[0].pJS.particles.move.speed = 0.1 * (index * 4);
-            }, index * 50);
+                window.pJSDom[0].pJS.particles.move.speed = 0.1 * (ref * 4);
+            }, ref * 50);
         })(i);
     }
     window.pJSDom[0].pJS.fn.vendors.destroypJS;
@@ -218,7 +218,7 @@ function movingFromHeader() {
 //
 //call on every page render
 $(document).on('mouseenter', '.dot', function () {
-    console.log($('.dot').index(this));
+    console.log($('.dot').ref(this));
 });
 
 $('.start-your-journey-btn').on('click', function () {
@@ -249,9 +249,9 @@ function researchSectionIn() {
     setToCenter($('.dot').eq(0), $('.process-text').eq(1));
     setToCenter($('.dot').eq(1), $('.process-text').eq(2));
     //show text
-    $('.process-text').eq(0).removeClass('hide-process-text');
-    $('.process-text').eq(1).removeClass('hide-process-text');
-    $('.process-text').eq(2).removeClass('hide-process-text');
+    $("[name=" + "research" + "]").removeClass('hide-process-text');
+    //$('.process-text').eq(1).removeClass('hide-process-text');
+    //$('.process-text').eq(2).removeClass('hide-process-text');
 }
 // function researchSectionOut() {
 //     //remove text
