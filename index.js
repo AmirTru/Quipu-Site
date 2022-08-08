@@ -17,7 +17,7 @@ $(function () {
         scrollSpeed: 1000,
         before: function (i, sscroll) {
 
-            //  moveStart();
+            moveStart();
             console.log('before' + i);
             if (i == 1) {
                 movingFromHeader();
@@ -45,12 +45,12 @@ $(function () {
         },
         after: function (i, sscroll) {
 
-            // moveEnd();
+            moveEnd();
             console.log('after' + i);
             if (i == 1) {
                 movingToHeader();
 
-                getCenterReadyToSet($('.dot').eq(2), $('.process-text'));
+                setToCenter($('.dot').eq(2), $('.process-text'));
 
             }
             if (i == 2) {
@@ -230,10 +230,11 @@ $.fn.toEm = function (settings) {
 
 
 $(window).resize(function () {
-    getCenterReadyToSet($('.dot').eq(2), $('.process-text'));
+    setToCenter($('.dot').eq(2), $('.process-text'));
 });
 
-function getCenterReadyToSet(getCenter, itemToMove) {
+//get dot center and set text to it  
+function setToCenter(getCenter, itemToMove) {
 
     var $this = getCenter;
     var offset = $this.offset();
