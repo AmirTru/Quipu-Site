@@ -49,29 +49,32 @@ $(function () {
         after: function (i, sscroll) {
 
             moveEnd();
+            theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
+                // Do stuff after transition
 
-            console.log('after' + i);
+                console.log('after' + i);
 
 
-            if (i == 1) {
-                
+                if (i == 1) {
 
-                setToCenter($('.dot').eq(2), $('.process-text'));
 
-            }
-            if (i == 2) {
+                    setToCenter($('.dot').eq(2), $('.process-text'));
 
-            }
+                }
+                if (i == 2) {
 
-            if (i == 3) {
+                }
 
-            }
-            if (i == 4) {
+                if (i == 3) {
 
-            }
-            if (i == 5) {
+                }
+                if (i == 4) {
 
-            }
+                }
+                if (i == 5) {
+
+                }
+            });
 
         }
     });
@@ -250,6 +253,6 @@ function setToCenter(getCenter, itemToMove) {
     var centerX = offset.left + width / 2;
     var centerY = offset.top + height / 2;
 
-    itemToMove.offset({ top: centerY - (itemToMove.height()/2), left: centerX });
+    itemToMove.offset({ top: centerY - (itemToMove.height() / 2), left: centerX });
 }
 
