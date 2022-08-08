@@ -52,7 +52,7 @@ $(function () {
                 // var offset = $('.dot').eq(2).offset();
                 //$('.process-text').offset(getCenterReadyToSet($('.dot').eq(2)));
                 //$('.dot-test').offset(getCenterReadyToSet($('.dot').eq(2)));
-                getCenterReadyToSet('.dot', '.process-text');
+                getCenterReadyToSet($('.dot').eq(2), $('.process-text'));
 
             }
             if (i == 2) {
