@@ -19,6 +19,9 @@ $(function () {
 
             moveStart();
             console.log('before' + i);
+            if (i == 0) {
+                movingToHeader();
+            }
             if (i == 1) {
                 movingFromHeader();
 
@@ -46,9 +49,12 @@ $(function () {
         after: function (i, sscroll) {
 
             moveEnd();
+
             console.log('after' + i);
+
+
             if (i == 1) {
-                movingToHeader();
+                
 
                 setToCenter($('.dot').eq(2), $('.process-text'));
 
