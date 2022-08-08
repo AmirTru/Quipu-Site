@@ -1,35 +1,56 @@
+/*
+hero
+process-starts
+research
+branding
+briefing
+design
+development 
+*/
+
 const theProcess = $('.the-process-lottie');
 
 function moveStart(index) {
     theProcess.addClass('moving');
     $('.process-text').addClass('hide-process-text');
 
-    if (index == 0) {
+    if (index === "hero") {
         movingToHeader();
-        console.log('before 0')
     }
-    if (index == 1) {
+    if (index === "process-starts") {
         movingFromHeader();
-        console.log('before 1')
     }
-    if (index == 2) {
-        console.log('before 2')
+    if (index === "research") {
+    }
+    if (index === "branding") {
+    }
+    if (index === "briefing") {
+    }
+    if (index === "design") {
+    }
+    if (index === "development") {
     }
 }
 function moveEnd(index) {
     theProcess.removeClass('moving');
     theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
 
-        if (index == 0) {
-            console.log('after 0')
+        if (index === "hero") {
         }
-        if (index == 1) {
+        if (index === "process-starts") {
             researchSectionIn();
-            console.log('after 1')
         }
-        if (index == 2) {
-            console.log('after 2')
+        if (index === "research") {
         }
+        if (index === "branding") {
+        }
+        if (index === "briefing") {
+        }
+        if (index === "design") {
+        }
+        if (index === "development") {
+        }
+
 
     });
 }
@@ -41,13 +62,12 @@ $(function () {
         easing: "linear",
         scrollSpeed: 1000,
         before: function (i, sscroll) {
-            console.log(sscroll);
-
-            moveStart(i);
+            var ref = sscroll[i].attr("data-section-name");
+            moveStart(ref);
         },
         after: function (i, sscroll) {
-
-            moveEnd(i);
+            var ref = sscroll[i].attr("data-section-name");
+            moveEnd(ref);
         }//,
         // afterResize: initialPosition,
         // afterRender: initialPosition
