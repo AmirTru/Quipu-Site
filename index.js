@@ -13,10 +13,8 @@ function moveEnd(index) {
 
         }
         if (index == 1) {
+            researchSectionIn()
 
-            setToCenter($('.dot').eq(2), $('.process-text').eq(0));
-            setToCenter($('.dot').eq(0), $('.process-text').eq(1));
-            setToCenter($('.dot').eq(1), $('.process-text').eq(2));
         }
     });
 
@@ -242,5 +240,17 @@ function setToCenter(getCenter, itemToMove) {
     var centerY = offset.top + height / 2;
 
     itemToMove.offset({ top: centerY - (itemToMove.height() / 2), left: centerX });
+}
+
+function researchSectionIn() {
+
+    //aling text to dot
+    setToCenter($('.dot').eq(2), $('.process-text').eq(0));
+    setToCenter($('.dot').eq(0), $('.process-text').eq(1));
+    setToCenter($('.dot').eq(1), $('.process-text').eq(2));
+    //show text
+    $('.process-text').eq(0).eq(1).eq(2).removeClass('hide-process-text');
+
+
 }
 
