@@ -4,26 +4,34 @@ function moveStart(index) {
     theProcess.addClass('moving');
     $('.process-text').addClass('hide-process-text');
 
-
     if (index == 0) {
         movingToHeader();
+        console.log('before 0')
     }
     if (index == 1) {
         movingFromHeader();
+        console.log('before 1')
     }
     if (index == 2) {
-    
+        console.log('before 2')
     }
 }
 function moveEnd(index) {
     theProcess.removeClass('moving');
     theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
+
         if (index == 0) {
+            console.log('after 0')
         }
         if (index == 1) {
             researchSectionIn();
+            console.log('after 1')
         }
-        
+        if (index == 2) {
+            researchSectionIn();
+            console.log('after 2')
+        }
+
     });
 }
 
@@ -34,9 +42,11 @@ $(function () {
         easing: "linear",
         scrollSpeed: 1000,
         before: function (i, sscroll) {
+            
             moveStart(i);
         },
         after: function (i, sscroll) {
+            
             moveEnd(i);
         }
     });
