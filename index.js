@@ -241,6 +241,7 @@ function setToCenter(getCenter, itemToMove) {
 function researchSectionIn() {
     theProcess.addClass('research');
     //aling text to dot
+    theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
     setToCenter($('.dot').eq(2), $('.process-text').eq(0));
     setToCenter($('.dot').eq(0), $('.process-text').eq(1));
     setToCenter($('.dot').eq(1), $('.process-text').eq(2));
@@ -248,7 +249,7 @@ function researchSectionIn() {
     $('.process-text').eq(0).removeClass('hide-process-text');
     $('.process-text').eq(1).removeClass('hide-process-text');
     $('.process-text').eq(2).removeClass('hide-process-text');
-
+    });
     
 }
 // function researchSectionOut() {
