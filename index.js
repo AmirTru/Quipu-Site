@@ -12,7 +12,6 @@ const theProcess = $('.the-process-lottie');
 
 function moveStart(index) {
     theProcess.addClass('moving');
-    $('.process-text').addClass('hide-process-text');
 
     if (index === "hero") {
         movingToHeader();
@@ -37,7 +36,7 @@ function moveEnd(index) {
 
         if (index === "hero") {
         }
-        if (index === "process-starts") {     
+        if (index === "process-starts") {
         }
         if (index === "research") {
             researchSectionIn();
@@ -64,6 +63,7 @@ $(function () {
         before: function (i, sscroll) {
             var ref = sscroll[i].attr("data-section-name");
             moveStart(ref);
+            $('.process-text').addClass('hide-process-text');
             console.log(ref)
         },
         after: function (i, sscroll) {
