@@ -51,6 +51,7 @@ $(function () {
                 movingToHeader();
                // var offset = $('.dot').eq(2).offset();
                 $('.process-text').offset(getCenterReadyToSet($('.dot').eq(2)));
+                $('.dot-test').offset(getCenterReadyToSet($('.dot').eq(2)));
 
             }
             if (i == 2) {
