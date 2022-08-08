@@ -244,10 +244,11 @@ function researchSectionIn() {
     setToCenter($('.dot').eq(0), $('.process-text').eq(1));
     setToCenter($('.dot').eq(1), $('.process-text').eq(2));
     //show text
-    $("[name=" + "research" + "]").removeClass('hide-process-text');
-    //$('.process-text').eq(1).removeClass('hide-process-text');
-    //$('.process-text').eq(2).removeClass('hide-process-text');
-}
+    $('.process-text').eq(0).removeClass('hide-process-text');
+    $('.process-text').eq(1).removeClass('hide-process-text');
+    $('.process-text').eq(2).removeClass('hide-process-text');
+
+    theProcess.addClass('research');}
 // function researchSectionOut() {
 //     //remove text
 //     $('.process-text').eq(0).addClass('hide-process-text');
