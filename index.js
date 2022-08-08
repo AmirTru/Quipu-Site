@@ -245,9 +245,8 @@ function getCenterReadyToSet(getCenter, itemToMove) {
     var centerX = offset.left + width / 2;
     var centerY = offset.top + height / 2;
 
-    console.log(height);
-    //itemToMove.style.height = height;
-    itemToMove.offset({ top: centerY, left: centerX });
+
+    itemToMove.offset({ top: centerY + (itemToMove.height / 2), left: centerX });
     // return { top: centerY, left: centerX };
 
 }
