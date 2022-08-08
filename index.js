@@ -49,9 +49,7 @@ $(function () {
             console.log('after' + i);
             if (i == 1) {
                 movingToHeader();
-                // var offset = $('.dot').eq(2).offset();
-                //$('.process-text').offset(getCenterReadyToSet($('.dot').eq(2)));
-                //$('.dot-test').offset(getCenterReadyToSet($('.dot').eq(2)));
+
                 getCenterReadyToSet($('.dot').eq(2), $('.process-text'));
 
             }
@@ -232,7 +230,7 @@ $.fn.toEm = function (settings) {
 
 
 $(window).resize(function () {
-    $('.process-text').offset(getCenterReadyToSet($('.dot').eq(2)));
+    getCenterReadyToSet($('.dot').eq(2), $('.process-text'));
 });
 
 function getCenterReadyToSet(getCenter, itemToMove) {
@@ -245,9 +243,6 @@ function getCenterReadyToSet(getCenter, itemToMove) {
     var centerX = offset.left + width / 2;
     var centerY = offset.top + height / 2;
 
-
-    itemToMove.offset({ top: (centerY + (itemToMove.height / 2)), left: centerX });
-    // return { top: centerY, left: centerX };
-
+    itemToMove.offset({ top: centerY - (itemToMove.height()/2), left: centerX });
 }
 
