@@ -47,7 +47,10 @@ $(function () {
         after: function (i, sscroll) {
 
             moveEnd(i);
-        }
+        },
+        afterResize: initialPosition,
+        afterRender: initialPosition
+
     });
 });
 
