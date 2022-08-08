@@ -28,7 +28,6 @@ function moveEnd(index) {
             console.log('after 1')
         }
         if (index == 2) {
-            researchSectionIn();
             console.log('after 2')
         }
 
@@ -42,11 +41,11 @@ $(function () {
         easing: "linear",
         scrollSpeed: 1000,
         before: function (i, sscroll) {
-            
+
             moveStart(i);
         },
         after: function (i, sscroll) {
-            
+
             moveEnd(i);
         }
     });
