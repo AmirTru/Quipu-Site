@@ -216,11 +216,6 @@ function movingFromHeader() {
 }
 
 //
-//call on every page render
-$(document).on('mouseenter', '.dot', function () {
-    console.log($('.dot').ref(this));
-});
-
 $('.start-your-journey-btn').on('click', function () {
     $.scrollify.next();
 });
