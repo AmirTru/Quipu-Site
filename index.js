@@ -2,9 +2,7 @@ const theProcess = $('.the-process-lottie');
 
 function moveStart(index) {
     theProcess.addClass('moving');
-    $('.process-text').each(function(i, obj) {
-        this.addClass('hide-process-text');
-    });
+    $('.process-text').addClass('hide-process-text');
 
 
     if (index == 0) {
