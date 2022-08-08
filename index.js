@@ -54,7 +54,9 @@ $(function () {
 
             if (i == 1) {
                 theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
-                    setToCenter($('.dot').eq(2), $('.process-text'));
+                    setToCenter($('.dot').eq(2), $('.process-text').eq(0));
+                    setToCenter($('.dot').eq(1), $('.process-text').eq(1));
+                    setToCenter($('.dot').eq(0), $('.process-text').eq(2));
                 });
 
 
