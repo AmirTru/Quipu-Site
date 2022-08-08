@@ -4,8 +4,22 @@ function moveStart() {
     theProcess.addClass('moving');
 
 }
-function moveEnd() {
+function moveEnd(index) {
     theProcess.removeClass('moving');
+    theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
+        if (index == 0) {
+
+
+
+        }
+        if (index == 1) {
+
+            setToCenter($('.dot').eq(2), $('.process-text').eq(0));
+            setToCenter($('.dot').eq(0), $('.process-text').eq(1));
+            setToCenter($('.dot').eq(1), $('.process-text').eq(2));
+        }
+    });
+
 }
 
 
@@ -48,32 +62,7 @@ $(function () {
         },
         after: function (i, sscroll) {
 
-            moveEnd();
-            console.log('after' + i);
-
-
-            if (i == 1) {
-                theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
-                    setToCenter($('.dot').eq(2), $('.process-text').eq(0));
-                    setToCenter($('.dot').eq(0), $('.process-text').eq(1));
-                    setToCenter($('.dot').eq(1), $('.process-text').eq(2));
-                });
-
-
-            }
-            if (i == 2) {
-
-            }
-
-            if (i == 3) {
-
-            }
-            if (i == 4) {
-
-            }
-            if (i == 5) {
-
-            }
+            moveEnd(i);
 
         }
     });
