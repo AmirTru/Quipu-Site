@@ -38,9 +38,10 @@ function moveEnd(index) {
         if (index === "hero") {
         }
         if (index === "process-starts") {
-            researchSectionIn();
+           
         }
         if (index === "research") {
+            researchSectionIn();
         }
         if (index === "branding") {
         }
