@@ -2,6 +2,11 @@ const theProcess = $('.the-process-lottie');
 
 function moveStart(index) {
     theProcess.addClass('moving');
+    $('.process-text').each(function(i, obj) {
+        this.addClass('hide-process-text');
+    });
+
+
     if (index == 0) {
         movingToHeader();
     }
@@ -20,6 +25,7 @@ function moveEnd(index) {
         if (index == 1) {
             researchSectionIn();
         }
+        
     });
 }
 
@@ -30,13 +36,7 @@ $(function () {
         easing: "linear",
         scrollSpeed: 1000,
         before: function (i, sscroll) {
-
             moveStart(i);
-            console.log('before' + i);
-
-
-
-
         },
         after: function (i, sscroll) {
             moveEnd(i);
@@ -230,10 +230,10 @@ function researchSectionIn() {
     $('.process-text').eq(1).removeClass('hide-process-text');
     $('.process-text').eq(2).removeClass('hide-process-text');
 }
-function researchSectionOut() {
-    //remove text
-    $('.process-text').eq(0).addClass('hide-process-text');
-    $('.process-text').eq(1).addClass('hide-process-text');
-    $('.process-text').eq(2).addClass('hide-process-text');
-}
+// function researchSectionOut() {
+//     //remove text
+//     $('.process-text').eq(0).addClass('hide-process-text');
+//     $('.process-text').eq(1).addClass('hide-process-text');
+//     $('.process-text').eq(2).addClass('hide-process-text');
+// }
 
