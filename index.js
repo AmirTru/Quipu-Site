@@ -154,9 +154,11 @@ function moveEnd(ref) {
         }
     }
     if (ref === "research") {
-        theProcess.addClass('research');   
+        theProcess.addClass('research');
         $('.research').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
-        researchSectionIn();
+            if ($('.process-text').eq(0).hasClass('hide-process-text')) {
+                researchSectionIn();
+            }
         });
 
     }
