@@ -190,7 +190,7 @@ $(function () {
 
 function initialPosition() {
     var current = $.scrollify.current();
-    console.log(current.getClass());
+    console.log(current);
     
 }
 
