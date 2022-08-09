@@ -224,7 +224,7 @@ $('.start-your-journey-btn').on('click', function () {
 });
 
 $(window).resize(function () {
-    setToCenter($('.dot').eq(2), $('.process-text'));
+   // setToCenter($('.dot').eq(2), $('.process-text'));
 });
 
 //get dot center and set text to it  
