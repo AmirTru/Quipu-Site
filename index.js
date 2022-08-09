@@ -117,6 +117,7 @@ function moveStart(ref) {
 
     if (ref === "hero") {
         movingFromHeader();
+        console.log('hero')
         // movingToHeader();
     }
     if (ref === "process-starts") {
