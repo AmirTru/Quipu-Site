@@ -1,13 +1,3 @@
-/*
-hero
-process-starts
-research
-branding
-briefing
-design
-development 
-*/
-
 const theProcess = $('.the-process-lottie');
 
 function moveStart(ref) {
@@ -25,7 +15,6 @@ function moveStart(ref) {
 
     }
     if (ref === "branding") {
-        //  theProcess.removeClass('research');
     }
     if (ref === "briefing") {
     }
@@ -72,7 +61,6 @@ $(function () {
         },
         after: function (i, sscroll) {
             var ref = sscroll[i].attr("data-section-name");
-            console.log(ref)
             moveEnd(ref);
         }//,
         // afterResize: initialPosition,
@@ -300,11 +288,11 @@ function designSectionIn() {
     // theProcess.addClass('research');
     //aling text to dot
     //  theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
-    setToCenter($('.dot').eq(9), $('.process-text').eq(9), true);
     setToCenter($('.dot').eq(10), $('.process-text').eq(10), true);
+    setToCenter($('.dot').eq(11), $('.process-text').eq(11), true);
     //show text
-    $('.process-text').eq(9).removeClass('hide-process-text');
     $('.process-text').eq(10).removeClass('hide-process-text');
+    $('.process-text').eq(11).removeClass('hide-process-text');
     // });
 
 }
