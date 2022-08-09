@@ -1,80 +1,4 @@
 const theProcess = $('.the-process-lottie');
-
-function moveStart(ref) {
-    $('.process-text').addClass('hide-process-text');
-    //  theProcess.addClass('moving');
-
-
-    if (ref === "hero") {
-        movingToHeader();
-    }
-    if (ref === "process-starts") {
-        movingFromHeader();
-    }
-    if (ref === "research") {
-
-    }
-    if (ref === "branding") {
-    }
-    if (ref === "briefing") {
-    }
-    if (ref === "design") {
-    }
-    if (ref === "development") {
-    }
-}
-function moveEnd(ref) {
-    //   theProcess.removeClass('moving');
-
-    if (ref === "hero") {
-    }
-    if (ref === "process-starts") {
-    }
-    if (ref === "research") {
-        researchSectionIn();
-    }
-    if (ref === "branding") {
-        brandingSectionIn();
-    }
-    if (ref === "briefing") {
-        briefingSectionIn();
-    }
-    if (ref === "design") {
-        designSectionIn();
-    }
-    if (ref === "development") {
-        developmentSectionIn();
-    }
-
-
-}
-
-//scrolling 
-$(function () {
-    $.scrollify({
-        section: ".s-scroll",
-        easing: "linear",
-        scrollSpeed: 2000,
-        before: function (i, sscroll) {
-            var ref = sscroll[i].attr("data-section-name");
-            moveStart(ref);
-
-        },
-        after: function (i, sscroll) {
-            var ref = sscroll[i].attr("data-section-name");
-            moveEnd(ref);
-        }//,
-        // afterResize: initialPosition,
-        // afterRender: initialPosition
-
-    });
-});
-
-// function initialPosition() {
-//     return $.scrollify.current();
-// }
-
-// init stars
 const PARTICLES_OPTIONS = {
     "particles": {
         "number": {
@@ -186,6 +110,83 @@ const PARTICLES_OPTIONS = {
     "retina_detect": true
 }
 
+function moveStart(ref) {
+    $('.process-text').addClass('hide-process-text');
+    //  theProcess.addClass('moving');
+
+
+    if (ref === "hero") {
+        movingToHeader();
+    }
+    if (ref === "process-starts") {
+        movingFromHeader();
+    }
+    if (ref === "research") {
+
+    }
+    if (ref === "branding") {
+    }
+    if (ref === "briefing") {
+    }
+    if (ref === "design") {
+    }
+    if (ref === "development") {
+    }
+}
+function moveEnd(ref) {
+    //   theProcess.removeClass('moving');
+
+    if (ref === "hero") {
+    }
+    if (ref === "process-starts") {
+    }
+    if (ref === "research") {
+        researchSectionIn();
+    }
+    if (ref === "branding") {
+        brandingSectionIn();
+    }
+    if (ref === "briefing") {
+        briefingSectionIn();
+    }
+    if (ref === "design") {
+        designSectionIn();
+    }
+    if (ref === "development") {
+        developmentSectionIn();
+    }
+
+
+}
+
+//scrolling 
+$(function () {
+    $.scrollify({
+        section: ".s-scroll",
+        easing: "linear",
+        scrollSpeed: 2000,
+        before: function (i, sscroll) {
+            var ref = sscroll[i].attr("data-section-name");
+            moveStart(ref);
+
+        },
+        after: function (i, sscroll) {
+            var ref = sscroll[i].attr("data-section-name");
+            moveEnd(ref);
+        }//,
+        // afterResize: initialPosition,
+        // afterRender: initialPosition
+
+    });
+});
+
+// function initialPosition() {
+//     return $.scrollify.current();
+// }
+
+// init stars
+
+
 particlesJS("stars", PARTICLES_OPTIONS
 );
 
@@ -211,7 +212,8 @@ function movingFromHeader() {
 
 //
 $('.start-your-journey-btn').on('click', function () {
-    $.scrollify.next();
+    window.pJSDom[0].pJS.fn.vendors.destroypJS()
+    //$.scrollify.next();
 });
 
 $(window).resize(function () {
@@ -301,8 +303,8 @@ function developmentSectionIn() {
     // theProcess.addClass('research');
     //aling text to dot
     //  theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
-    setToCenter($('.dot').eq(13), $('.process-text').eq(12), false);
-    setToCenter($('.dot').eq(12), $('.process-text').eq(13), false);
+    setToCenter($('.dot').eq(12), $('.process-text').eq(12), false);
+    setToCenter($('.dot').eq(13), $('.process-text').eq(13), false);
     setToCenter($('.dot').eq(14), $('.process-text').eq(14), false);
     //show text
     $('.process-text').eq(12).removeClass('hide-process-text');
