@@ -116,9 +116,13 @@ function moveStart(ref) {
 
 
     if (ref === "hero") {
-        //movingFromHeader();
-        console.log('hero')
-        // movingToHeader();
+        if (!window["pJSDom"] instanceof Array && window["pJSDom"].length > 0) {
+            particlesJS("stars", PARTICLES_OPTIONS
+            );
+            //movingFromHeader();
+            console.log('hero')
+            // movingToHeader();
+        }
     }
     if (ref === "process-starts") {
         //  movingFromHeader();
@@ -144,12 +148,7 @@ function moveEnd(ref) {
     }
     if (ref === "process-starts") {
         if (window["pJSDom"] instanceof Array && window["pJSDom"].length > 0) {
-            console.log(window["pJSDom"].length);
             desroyStars();
-        } else {
-            console.log(window["pJSDom"].length);
-            particlesJS("stars", PARTICLES_OPTIONS
-            );
         }
 
     }
