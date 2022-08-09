@@ -120,7 +120,10 @@ function moveStart(ref) {
         // movingToHeader();
     }
     if (ref === "process-starts") {
-
+        if (window["pJSDom"] instanceof Array && window["pJSDom"].length > 0) {
+            console.log(window["pJSDom"].length);
+            desroyStars();
+        } console.log(window["pJSDom"].length);
         movingFromHeader();
     }
     if (ref === "research") {
@@ -139,10 +142,7 @@ function moveEnd(ref) {
     //   theProcess.removeClass('moving');
 
     if (ref === "hero") {
-        if (window["pJSDom"] instanceof Array && window["pJSDom"].length > 0) {
-            console.log(window["pJSDom"].length);
-            desroyStars();
-        } console.log(window["pJSDom"].length);
+
     }
     if (ref === "process-starts") {
 
