@@ -171,7 +171,12 @@ function moveEnd(ref) {
         });
     }
     if (ref === "briefing") {
-        briefingSectionIn();
+        theProcess.addClass('briefing');
+        $('.briefing').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
+            if ($('#the-process-lottie').hasClass('briefing')) {
+                briefingSectionIn();
+            }
+        });
     }
     if (ref === "design") {
         designSectionIn();
