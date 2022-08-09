@@ -193,7 +193,7 @@ $(function () {
     $.scrollify({
         section: ".s-scroll",
         easing: "linear",
-        scrollSpeed: 2000,
+        scrollSpeed: 3000,
         before: function (i, sscroll) {
             ref = sscroll[i].attr("data-section-name");
             moveStart(ref);
