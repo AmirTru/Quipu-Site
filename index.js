@@ -12,7 +12,7 @@ const theProcess = $('.the-process-lottie');
 
 function moveStart(ref) {
     $('.process-text').addClass('hide-process-text');
-    theProcess.addClass('moving');
+  //  theProcess.addClass('moving');
     
 
     if (ref === "hero") {
@@ -35,7 +35,7 @@ function moveStart(ref) {
     }
 }
 function moveEnd(ref) {
-    theProcess.removeClass('moving');
+ //   theProcess.removeClass('moving');
 //theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
 
         if (ref === "hero") {
