@@ -197,22 +197,22 @@ function initialPosition() {
 }
 function resizeText() {
     var current = $.scrollify.current().attr("data-section-name");
-    console.log(current);
-    // if (ref === "research") {
-    //     researchSectionIn();
-    // }
-    // if (ref === "branding") {
-    //     brandingSectionIn();
-    // }
-    // if (ref === "briefing") {
-    //     briefingSectionIn();
-    // }
-    // if (ref === "design") {
-    //     designSectionIn();
-    // }
-    // if (ref === "development") {
-    //     developmentSectionIn();
-    // }
+
+    if (current === "research") {
+        researchSectionIn();
+    }
+    if (current === "branding") {
+        brandingSectionIn();
+    }
+    if (current === "briefing") {
+        briefingSectionIn();
+    }
+    if (current === "design") {
+        designSectionIn();
+    }
+    if (current === "development") {
+        developmentSectionIn();
+    }
 }
 
 // init stars
