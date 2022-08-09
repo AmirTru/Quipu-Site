@@ -242,8 +242,9 @@ function setToCenter(getCenter, itemToMove, isRigthSide) {
         itemToMove.offset({ top: centerY - (itemToMove.height() / 2), left: centerX });
     } else {
         var parentWidth = itemToMove.offsetParent().width();
+        console.log(parentWidth)
         var percent = 100 * width / parentWidth;
-        itemToMove.offset({ top: centerY - (itemToMove.height() / 2), left: centerX - itemToMove.width() - (percent * 6) });
+        itemToMove.offset({ top: centerY - (itemToMove.height() / 2), left: centerX - itemToMove.width() - (percent * 10) });
     }
 }
 
