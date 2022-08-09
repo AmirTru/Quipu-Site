@@ -111,27 +111,23 @@ const PARTICLES_OPTIONS = {
 }
 
 function moveStart(ref) {
+    //hide text & scale down "the process"
     $('.process-text').addClass('hide-process-text');
-    //  theProcess.addClass('moving');
-
+    theProcess.addClass('moving');
 
     if (ref === "hero") {
-        console.log('hero')
         if (window["pJSDom"] instanceof Array && window["pJSDom"].length == 0) {
             particlesJS("stars", PARTICLES_OPTIONS
             );
-            movingToHeader();      
+            movingToHeader();
         }
     }
     if (ref === "process-starts") {
         if (window["pJSDom"] instanceof Array && window["pJSDom"].length > 0) {
             movingFromHeader();
         }
-        
-
     }
     if (ref === "research") {
-
     }
     if (ref === "branding") {
     }
@@ -143,19 +139,19 @@ function moveStart(ref) {
     }
 }
 function moveEnd(ref) {
-    //   theProcess.removeClass('moving');
+    
 
     if (ref === "hero") {
-        
+
     }
     if (ref === "process-starts") {
         if (window["pJSDom"] instanceof Array && window["pJSDom"].length > 0) {
             desroyStars();
         }
-
     }
     if (ref === "research") {
-
+        theProcess.removeClass('moving');
+        theProcess.addClass('research');
         researchSectionIn();
     }
     if (ref === "branding") {
@@ -170,8 +166,6 @@ function moveEnd(ref) {
     if (ref === "development") {
         developmentSectionIn();
     }
-
-
 }
 
 //scrolling 
