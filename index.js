@@ -121,11 +121,7 @@ function moveStart(ref) {
     }
     if (ref === "process-starts") {
         movingFromHeader();
-        if (window["pJSDom"] instanceof Array && window["pJSDom"].length > 0) {
-            console.log(window["pJSDom"].length);
-            desroyStars();
-        } console.log(window["pJSDom"].length);
-        
+  
     }
     if (ref === "research") {
 
@@ -146,6 +142,10 @@ function moveEnd(ref) {
 
     }
     if (ref === "process-starts") {
+        if (window["pJSDom"] instanceof Array && window["pJSDom"].length > 0) {
+            console.log(window["pJSDom"].length);
+            desroyStars();
+        } console.log(window["pJSDom"].length);
 
     }
     if (ref === "research") {
