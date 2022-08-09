@@ -116,14 +116,15 @@ function moveStart(ref) {
 
 
     if (ref === "hero") {
-        movingToHeader();
+        movingFromHeader();
+       // movingToHeader();
     }
     if (ref === "process-starts") {
+        
         movingFromHeader();
     }
     if (ref === "research") {
-        particlesJS("stars", PARTICLES_OPTIONS
-);
+        
     }
     if (ref === "branding") {
     }
@@ -138,10 +139,10 @@ function moveEnd(ref) {
     //   theProcess.removeClass('moving');
 
     if (ref === "hero") {
-       
+
     }
     if (ref === "process-starts") {
-        
+
     }
     if (ref === "research") {
         window.pJSDom[0].pJS.fn.vendors.destroypJS()
@@ -208,7 +209,7 @@ function movingFromHeader() {
                 window.pJSDom[0].pJS.particles.move.speed = 0.1 * (ref * 4);
             }, ref * 50);
         })(i);
-    }  
+    }
 }
 
 //
