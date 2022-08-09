@@ -11,7 +11,9 @@ development
 const theProcess = $('.the-process-lottie');
 
 function moveStart(ref) {
+    $('.process-text').addClass('hide-process-text');
     theProcess.addClass('moving');
+    
 
     if (ref === "hero") {
         movingToHeader();
@@ -65,7 +67,6 @@ $(function () {
         before: function (i, sscroll) {
             var ref = sscroll[i].attr("data-section-name");
             moveStart(ref);
-            $('.process-text').addClass('hide-process-text');
             console.log(ref)
         },
         after: function (i, sscroll) {
