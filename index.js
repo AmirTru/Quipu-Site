@@ -196,7 +196,7 @@ function initialPosition() {
 
 }
 function resizeText() {
-    var current = $.scrollify.current().hasClass();
+    var current = $.scrollify.current().attr("data-section-name");
     console.log(current);
     // if (ref === "research") {
     //     researchSectionIn();
