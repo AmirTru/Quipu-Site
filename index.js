@@ -137,8 +137,10 @@ function moveEnd(ref) {
     //   theProcess.removeClass('moving');
 
     if (ref === "hero") {
+       
     }
     if (ref === "process-starts") {
+        window.pJSDom[0].pJS.fn.vendors.destroypJS()
     }
     if (ref === "research") {
         researchSectionIn();
@@ -206,8 +208,7 @@ function movingFromHeader() {
                 window.pJSDom[0].pJS.particles.move.speed = 0.1 * (ref * 4);
             }, ref * 50);
         })(i);
-    }
-    window.pJSDom[0].pJS.fn.vendors.destroypJS()
+    }  
 }
 
 //
