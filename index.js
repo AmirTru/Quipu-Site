@@ -181,16 +181,18 @@ $(function () {
         after: function (i, sscroll) {
             var ref = sscroll[i].attr("data-section-name");
             moveEnd(ref);
-        }//,
-        // afterResize: initialPosition,
-        // afterRender: initialPosition
+        },
+         afterResize: initialPosition,
+         afterRender: initialPosition
 
     });
 });
 
-// function initialPosition() {
-//     return $.scrollify.current();
-// }
+function initialPosition() {
+    var current = $.scrollify.current();
+    console.log(current.getClass());
+    
+}
 
 // init stars
 particlesJS("stars", PARTICLES_OPTIONS
