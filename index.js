@@ -120,6 +120,7 @@ function moveStart(ref) {
         if (window["pJSDom"] instanceof Array && window["pJSDom"].length == 0) {
             particlesJS("stars", PARTICLES_OPTIONS
             );
+            console.log("up")
             //movingFromHeader();
 
             // movingToHeader();
@@ -150,6 +151,7 @@ function moveEnd(ref) {
     if (ref === "process-starts") {
         if (window["pJSDom"] instanceof Array && window["pJSDom"].length > 0) {
             desroyStars();
+            console.log("down")
         }
 
     }
