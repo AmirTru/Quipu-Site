@@ -150,7 +150,7 @@ function moveEnd(ref) {
         }
     }
     if (ref === "research") {
-        theProcess.addClass('anchored research');
+        theProcess.addClass('research');
         //theProcess.addClass('research');        
         researchSectionIn();
 
