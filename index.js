@@ -316,7 +316,7 @@ function developmentSectionIn() {
     // });
 }
 
-function desroyStars{
+function desroyStars(){
     window.pJSDom[0].pJS.fn.vendors.destroypJS();
     window["pJSDom"] = [];
 }
