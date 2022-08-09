@@ -184,7 +184,7 @@ $(function () {
             ref = sscroll[i].attr("data-section-name");
             moveEnd(ref);
         },
-        afterResize: resizeText(ref),
+        afterResize: resizeText,
         afterRender: initialPosition
 
     });
@@ -195,8 +195,8 @@ function initialPosition() {
     console.log(current);
 
 }
-function resizeText(ref) {
-console.log(ref);
+function resizeText() {
+console.log("g");
     // if (ref === "research") {
     //     researchSectionIn();
     // }
