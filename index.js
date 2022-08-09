@@ -120,11 +120,12 @@ function moveStart(ref) {
         // movingToHeader();
     }
     if (ref === "process-starts") {
+        movingFromHeader();
         if (window["pJSDom"] instanceof Array && window["pJSDom"].length > 0) {
             console.log(window["pJSDom"].length);
             desroyStars();
         } console.log(window["pJSDom"].length);
-        movingFromHeader();
+        
     }
     if (ref === "research") {
 
