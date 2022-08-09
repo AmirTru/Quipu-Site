@@ -145,7 +145,10 @@ function moveEnd(ref) {
         if (window["pJSDom"] instanceof Array && window["pJSDom"].length > 0) {
             console.log(window["pJSDom"].length);
             desroyStars();
-        } else { console.log(window["pJSDom"].length); }
+        } else {
+            particlesJS("stars", PARTICLES_OPTIONS
+            );
+        }
 
     }
     if (ref === "research") {
