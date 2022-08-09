@@ -197,21 +197,21 @@ function initialPosition() {
 }
 function resizeText(ref) {
 console.log(ref);
-    if (ref === "research") {
-        researchSectionIn();
-    }
-    if (ref === "branding") {
-        brandingSectionIn();
-    }
-    if (ref === "briefing") {
-        briefingSectionIn();
-    }
-    if (ref === "design") {
-        designSectionIn();
-    }
-    if (ref === "development") {
-        developmentSectionIn();
-    }
+    // if (ref === "research") {
+    //     researchSectionIn();
+    // }
+    // if (ref === "branding") {
+    //     brandingSectionIn();
+    // }
+    // if (ref === "briefing") {
+    //     briefingSectionIn();
+    // }
+    // if (ref === "design") {
+    //     designSectionIn();
+    // }
+    // if (ref === "development") {
+    //     developmentSectionIn();
+    // }
 }
 
 // init stars
