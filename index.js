@@ -301,8 +301,8 @@ function developmentSectionIn() {
     // theProcess.addClass('research');
     //aling text to dot
     //  theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
-    setToCenter($('.dot').eq(12), $('.process-text').eq(12), false);
-    setToCenter($('.dot').eq(13), $('.process-text').eq(13), false);
+    setToCenter($('.dot').eq(13), $('.process-text').eq(12), false);
+    setToCenter($('.dot').eq(12), $('.process-text').eq(13), false);
     setToCenter($('.dot').eq(14), $('.process-text').eq(14), false);
     //show text
     $('.process-text').eq(12).removeClass('hide-process-text');
