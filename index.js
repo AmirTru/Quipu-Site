@@ -120,14 +120,11 @@ function moveStart(ref) {
         if (window["pJSDom"] instanceof Array && window["pJSDom"].length == 0) {
             particlesJS("stars", PARTICLES_OPTIONS
             );
-            movingToHeader();
-            //movingFromHeader();
-
-          
+            movingToHeader();      
         }
     }
     if (ref === "process-starts") {
-        //  movingFromHeader();
+        movingFromHeader();
 
     }
     if (ref === "research") {
@@ -146,7 +143,7 @@ function moveEnd(ref) {
     //   theProcess.removeClass('moving');
 
     if (ref === "hero") {
-
+        
     }
     if (ref === "process-starts") {
         if (window["pJSDom"] instanceof Array && window["pJSDom"].length > 0) {
