@@ -116,7 +116,7 @@ function moveStart(ref) {
 
 
     if (ref === "hero") {
-        movingFromHeader();
+        //movingFromHeader();
         console.log('hero')
         // movingToHeader();
     }
