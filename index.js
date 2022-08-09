@@ -225,7 +225,7 @@ $('.start-your-journey-btn').on('click', function () {
 });
 
 $(window).resize(function () {
-   // setToCenter($('.dot').eq(2), $('.process-text'));
+    // setToCenter($('.dot').eq(2), $('.process-text'));
 });
 
 //get dot center and set text to it  
@@ -284,8 +284,8 @@ function briefingSectionIn() {
     // theProcess.addClass('research');
     //aling text to dot
     //  theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
-    setToCenter($('.dot').eq(7), $('.process-text').eq(7), false);
-    setToCenter($('.dot').eq(8), $('.process-text').eq(8), false);
+    setToCenter($('.dot').eq(8), $('.process-text').eq(7), false);
+    setToCenter($('.dot').eq(7), $('.process-text').eq(8), false);
     setToCenter($('.dot').eq(9), $('.process-text').eq(9), false);
     //show text
     $('.process-text').eq(7).removeClass('hide-process-text');
