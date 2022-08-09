@@ -191,11 +191,12 @@ $(function () {
 });
 
 function initialPosition() {
-    var current = $.scrollify.current();
-    console.log(current);
+    var current = $.scrollify.current().hasClass();
+   // console.log(current);
 
 }
 function resizeText() {
+    var current = $.scrollify.current().hasClass();
 console.log("g");
     // if (ref === "research") {
     //     researchSectionIn();
