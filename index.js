@@ -163,7 +163,12 @@ function moveEnd(ref) {
 
     }
     if (ref === "branding") {
-        brandingSectionIn();
+        theProcess.addClass('branding');
+        $('.branding').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
+            if ($('#the-process-lottie').hasClass('branding')) {
+                brandingSectionIn();
+            }
+        });
     }
     if (ref === "briefing") {
         briefingSectionIn();
