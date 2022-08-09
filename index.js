@@ -182,8 +182,8 @@ $(function () {
             var ref = sscroll[i].attr("data-section-name");
             moveEnd(ref);
         },
-         afterResize: initialPosition,
-         afterRender: initialPosition
+        afterResize: resizeText(ref),
+        afterRender: initialPosition
 
     });
 });
@@ -191,7 +191,25 @@ $(function () {
 function initialPosition() {
     var current = $.scrollify.current();
     console.log(current);
-    
+
+}
+function resizeText(ref) {
+    if (ref === "research") {
+
+        researchSectionIn();
+    }
+    if (ref === "branding") {
+        brandingSectionIn();
+    }
+    if (ref === "briefing") {
+        briefingSectionIn();
+    }
+    if (ref === "design") {
+        designSectionIn();
+    }
+    if (ref === "development") {
+        developmentSectionIn();
+    }
 }
 
 // init stars
@@ -222,9 +240,6 @@ $('.start-your-journey-btn').on('click', function () {
     $.scrollify.next();
 });
 
-$(window).resize(function () {
-    // setToCenter($('.dot').eq(2), $('.process-text'));
-});
 
 //get dot center and set text to it  
 function setToCenter(getCenter, itemToMove, isRigthSide) {
