@@ -115,6 +115,9 @@ function moveStart(ref) {
     $('.process-text').addClass('hide-process-text');
     theProcess.removeClass('anchored');
 
+    //restore only one class 
+    jQuery('#the-process-lottie').attr('class', 'the-process-lottie');
+
     if (ref === "hero") {
         if (window["pJSDom"] instanceof Array && window["pJSDom"].length == 0) {
             particlesJS("stars", PARTICLES_OPTIONS
