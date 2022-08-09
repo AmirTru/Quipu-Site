@@ -34,7 +34,7 @@ function moveStart(ref) {
 }
 function moveEnd(ref) {
     theProcess.removeClass('moving');
-    theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
+//theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
 
         if (ref === "hero") {
         }
@@ -53,7 +53,7 @@ function moveEnd(ref) {
         }
 
 
-    });
+ //   });
 }
 
 //scrolling 
