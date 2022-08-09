@@ -140,9 +140,10 @@ function moveEnd(ref) {
        
     }
     if (ref === "process-starts") {
-        window.pJSDom[0].pJS.fn.vendors.destroypJS()
+        
     }
     if (ref === "research") {
+        window.pJSDom[0].pJS.fn.vendors.destroypJS()
         researchSectionIn();
     }
     if (ref === "branding") {
