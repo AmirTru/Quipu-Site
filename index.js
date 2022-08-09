@@ -25,7 +25,7 @@ function moveStart(ref) {
        
     }
     if (ref === "branding") {
-        theProcess.removeClass('research');
+      //  theProcess.removeClass('research');
     }
     if (ref === "briefing") {
     }
@@ -242,7 +242,7 @@ function setToCenter(getCenter, itemToMove) {
 }
 
 function researchSectionIn() {
-    theProcess.addClass('research');
+   // theProcess.addClass('research');
     //aling text to dot
     theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
     setToCenter($('.dot').eq(2), $('.process-text').eq(0));
