@@ -210,8 +210,22 @@ $(function () {
 });
 
 function initialPosition() {
-    var current = $.scrollify.current().hasClass();
-    // console.log(current);
+    var current = $.scrollify.current().attr("data-section-name");
+    if (current === "research") {
+        $.scrollify.instantMove("#research");
+    }
+    if (current === "branding") {
+        $.scrollify.instantMove("#branding");
+    }
+    if (current === "briefing") {
+        $.scrollify.instantMove("#briefing");
+    }
+    if (current === "design") {
+        $.scrollify.instantMove("#design");
+    }
+    if (current === "development") {
+        $.scrollify.instantMove("#development");
+    }
 
 }
 function resizeText() {
