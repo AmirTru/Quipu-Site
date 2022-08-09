@@ -113,7 +113,7 @@ const PARTICLES_OPTIONS = {
 function moveStart(ref) {
     //hide text & scale down "the process"
     $('.process-text').addClass('hide-process-text');
-    theProcess.addClass('moving');
+    theProcess.removeClass('anchored');
 
     if (ref === "hero") {
         if (window["pJSDom"] instanceof Array && window["pJSDom"].length == 0) {
@@ -139,7 +139,7 @@ function moveStart(ref) {
     }
 }
 function moveEnd(ref) {
-    
+
 
     if (ref === "hero") {
 
@@ -150,11 +150,10 @@ function moveEnd(ref) {
         }
     }
     if (ref === "research") {
-        theProcess.removeClass('moving');
-        theProcess.addClass('research');
-        $('.the-process-lottie .research').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
+        theProcess.addClass('anchored research');
+        //theProcess.addClass('research');        
         researchSectionIn();
-        });
+
     }
     if (ref === "branding") {
         brandingSectionIn();
