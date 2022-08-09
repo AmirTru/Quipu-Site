@@ -117,14 +117,14 @@ function moveStart(ref) {
 
     if (ref === "hero") {
         movingFromHeader();
-       // movingToHeader();
+        // movingToHeader();
     }
     if (ref === "process-starts") {
-        
+
         movingFromHeader();
     }
     if (ref === "research") {
-        
+
     }
     if (ref === "branding") {
     }
@@ -139,13 +139,14 @@ function moveEnd(ref) {
     //   theProcess.removeClass('moving');
 
     if (ref === "hero") {
-
+        // if ()
+        //     desroyStars();
     }
     if (ref === "process-starts") {
 
     }
     if (ref === "research") {
-        window.pJSDom[0].pJS.fn.vendors.destroypJS()
+
         researchSectionIn();
     }
     if (ref === "branding") {
@@ -214,7 +215,8 @@ function movingFromHeader() {
 
 //
 $('.start-your-journey-btn').on('click', function () {
-    $.scrollify.next();
+    Particles.destroy();
+   // $.scrollify.next();
 });
 
 $(window).resize(function () {
@@ -312,5 +314,10 @@ function developmentSectionIn() {
     $('.process-text').eq(13).removeClass('hide-process-text');
     $('.process-text').eq(14).removeClass('hide-process-text');
     // });
+}
+
+function desroyStars{
+    window.pJSDom[0].pJS.fn.vendors.destroypJS();
+    window["pJSDom"] = [];
 }
 
