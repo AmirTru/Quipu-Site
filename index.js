@@ -207,13 +207,12 @@ function movingFromHeader() {
             }, ref * 50);
         })(i);
     }
-    window.pJSDom[0].pJS.fn.vendors.destroypJS;
+    window.pJSDom[0].pJS.fn.vendors.destroypJS()
 }
 
 //
 $('.start-your-journey-btn').on('click', function () {
-    window.pJSDom[0].pJS.fn.vendors.destroypJS()
-    //$.scrollify.next();
+    $.scrollify.next();
 });
 
 $(window).resize(function () {
