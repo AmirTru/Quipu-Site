@@ -43,6 +43,7 @@ function moveEnd(ref) {
         designSectionIn();
     }
     if (ref === "development") {
+        developmentSectionIn();
     }
 
 
@@ -294,5 +295,19 @@ function designSectionIn() {
     $('.process-text').eq(10).removeClass('hide-process-text');
     $('.process-text').eq(11).removeClass('hide-process-text');
     // });
-
 }
+
+function developmentSectionIn() {
+    // theProcess.addClass('research');
+    //aling text to dot
+    //  theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
+    setToCenter($('.dot').eq(12), $('.process-text').eq(12), false);
+    setToCenter($('.dot').eq(13), $('.process-text').eq(13), false);
+    setToCenter($('.dot').eq(14), $('.process-text').eq(14), false);
+    //show text
+    $('.process-text').eq(12).removeClass('hide-process-text');
+    $('.process-text').eq(13).removeClass('hide-process-text');
+    $('.process-text').eq(14).removeClass('hide-process-text');
+    // });
+}
+
