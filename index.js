@@ -113,7 +113,7 @@ const PARTICLES_OPTIONS = {
 function moveStart(ref) {
     //hide text & scale down "the process"
     $('.process-text').addClass('hide-process-text');
-    theProcess.removeClass('anchored');
+    //theProcess.removeClass('anchored');
 
     //restore only one class 
     jQuery('#the-process-lottie').attr('class', 'the-process-lottie');
