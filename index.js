@@ -124,7 +124,10 @@ function moveStart(ref) {
         }
     }
     if (ref === "process-starts") {
-        movingFromHeader();
+        if (window["pJSDom"] instanceof Array && window["pJSDom"].length > 0) {
+            movingFromHeader();
+        }
+        
 
     }
     if (ref === "research") {
