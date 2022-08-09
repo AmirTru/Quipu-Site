@@ -116,11 +116,12 @@ function moveStart(ref) {
 
 
     if (ref === "hero") {
-        if (!window["pJSDom"] instanceof Array && window["pJSDom"].length > 0) {
+        console.log('hero')
+        if (window["pJSDom"] instanceof Array && window["pJSDom"].length == 0) {
             particlesJS("stars", PARTICLES_OPTIONS
             );
             //movingFromHeader();
-            console.log('hero')
+
             // movingToHeader();
         }
     }
