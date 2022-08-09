@@ -150,9 +150,10 @@ function moveEnd(ref) {
         }
     }
     if (ref === "research") {
-        theProcess.addClass('research');
-        //theProcess.addClass('research');        
+        theProcess.addClass('research');   
+        $('.research').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
         researchSectionIn();
+        });
 
     }
     if (ref === "branding") {
