@@ -152,7 +152,9 @@ function moveEnd(ref) {
     if (ref === "research") {
         theProcess.removeClass('moving');
         theProcess.addClass('research');
+        $('.the-process-lottie .research').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
         researchSectionIn();
+        });
     }
     if (ref === "branding") {
         brandingSectionIn();
