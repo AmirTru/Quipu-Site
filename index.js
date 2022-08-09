@@ -156,7 +156,7 @@ function moveEnd(ref) {
     if (ref === "research") {
         theProcess.addClass('research');
         $('.research').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
-            if ($('#research-text').hasClass('hide-process-text')) {
+            if ($('#the-process-lottie').hasClass('research')) {
                 researchSectionIn();
             }
         });
