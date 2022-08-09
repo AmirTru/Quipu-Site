@@ -11,7 +11,7 @@ development
 const theProcess = $('.the-process-lottie');
 
 function moveStart(ref) {
-    
+    $('.process-text').addClass('hide-process-text');
     theProcess.addClass('moving');
     
 
@@ -22,7 +22,7 @@ function moveStart(ref) {
         movingFromHeader();
     }
     if (ref === "research") {
-        $('.process-text').addClass('hide-process-text');
+       
     }
     if (ref === "branding") {
         theProcess.removeClass('research');
