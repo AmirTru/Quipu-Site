@@ -139,8 +139,10 @@ function moveEnd(ref) {
     //   theProcess.removeClass('moving');
 
     if (ref === "hero") {
-        // if ()
-        //     desroyStars();
+        if (window["pJSDom"] instanceof Array && window["pJSDom"].length > 0) {
+            console.log(window["pJSDom"].length);
+            desroyStars();
+        } console.log(window["pJSDom"].length);
     }
     if (ref === "process-starts") {
 
@@ -215,8 +217,7 @@ function movingFromHeader() {
 
 //
 $('.start-your-journey-btn').on('click', function () {
-    Particles.destroy();
-   // $.scrollify.next();
+    $.scrollify.next();
 });
 
 $(window).resize(function () {
@@ -316,7 +317,7 @@ function developmentSectionIn() {
     // });
 }
 
-function desroyStars(){
+function desroyStars() {
     window.pJSDom[0].pJS.fn.vendors.destroypJS();
     window["pJSDom"] = [];
 }
