@@ -12,8 +12,8 @@ const theProcess = $('.the-process-lottie');
 
 function moveStart(ref) {
     $('.process-text').addClass('hide-process-text');
-  //  theProcess.addClass('moving');
-    
+    //  theProcess.addClass('moving');
+
 
     if (ref === "hero") {
         movingToHeader();
@@ -22,10 +22,10 @@ function moveStart(ref) {
         movingFromHeader();
     }
     if (ref === "research") {
-       
+
     }
     if (ref === "branding") {
-      //  theProcess.removeClass('research');
+        //  theProcess.removeClass('research');
     }
     if (ref === "briefing") {
     }
@@ -35,27 +35,26 @@ function moveStart(ref) {
     }
 }
 function moveEnd(ref) {
- //   theProcess.removeClass('moving');
-//theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
+    //   theProcess.removeClass('moving');
 
-        if (ref === "hero") {
-        }
-        if (ref === "process-starts") {
-        }
-        if (ref === "research") {
-            researchSectionIn();
-        }
-        if (ref === "branding") {
-        }
-        if (ref === "briefing") {
-        }
-        if (ref === "design") {
-        }
-        if (ref === "development") {
-        }
+    if (ref === "hero") {
+    }
+    if (ref === "process-starts") {
+    }
+    if (ref === "research") {
+        researchSectionIn();
+    }
+    if (ref === "branding") {
+        brandingSectionIn();
+    }
+    if (ref === "briefing") {
+    }
+    if (ref === "design") {
+    }
+    if (ref === "development") {
+    }
 
 
- //   });
 }
 
 //scrolling 
@@ -67,7 +66,7 @@ $(function () {
         before: function (i, sscroll) {
             var ref = sscroll[i].attr("data-section-name");
             moveStart(ref);
-            
+
         },
         after: function (i, sscroll) {
             var ref = sscroll[i].attr("data-section-name");
@@ -243,9 +242,9 @@ function setToCenter(getCenter, itemToMove) {
 }
 
 function researchSectionIn() {
-   // theProcess.addClass('research');
+    // theProcess.addClass('research');
     //aling text to dot
-  //  theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
+    //  theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
     setToCenter($('.dot').eq(2), $('.process-text').eq(0));
     setToCenter($('.dot').eq(0), $('.process-text').eq(1));
     setToCenter($('.dot').eq(1), $('.process-text').eq(2));
@@ -253,9 +252,28 @@ function researchSectionIn() {
     $('.process-text').eq(0).removeClass('hide-process-text');
     $('.process-text').eq(1).removeClass('hide-process-text');
     $('.process-text').eq(2).removeClass('hide-process-text');
-   // });
-    
+    // });
+
 }
+
+function brandingSectionIn() {
+    // theProcess.addClass('research');
+    //aling text to dot
+    //  theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
+    setToCenter($('.dot').eq(3), $('.process-text').eq(3));
+    setToCenter($('.dot').eq(4), $('.process-text').eq(4));
+    setToCenter($('.dot').eq(5), $('.process-text').eq(5));
+    setToCenter($('.dot').eq(6), $('.process-text').eq(6));
+    //show text
+    $('.process-text').eq(3).removeClass('hide-process-text');
+    $('.process-text').eq(4).removeClass('hide-process-text');
+    $('.process-text').eq(5).removeClass('hide-process-text');
+    $('.process-text').eq(6).removeClass('hide-process-text');
+    // });
+
+}
+
+
 // function researchSectionOut() {
 //     //remove text
 //     $('.process-text').eq(0).addClass('hide-process-text');
