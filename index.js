@@ -67,10 +67,11 @@ $(function () {
         before: function (i, sscroll) {
             var ref = sscroll[i].attr("data-section-name");
             moveStart(ref);
-            console.log(ref)
+            
         },
         after: function (i, sscroll) {
             var ref = sscroll[i].attr("data-section-name");
+            console.log(ref)
             moveEnd(ref);
         }//,
         // afterResize: initialPosition,
