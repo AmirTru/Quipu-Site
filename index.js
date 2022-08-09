@@ -120,7 +120,7 @@ function moveStart(ref) {
         // movingToHeader();
     }
     if (ref === "process-starts") {
-        movingFromHeader();
+      //  movingFromHeader();
 
     }
     if (ref === "research") {
