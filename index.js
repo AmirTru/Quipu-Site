@@ -122,7 +122,8 @@ function moveStart(ref) {
         movingFromHeader();
     }
     if (ref === "research") {
-
+        particlesJS("stars", PARTICLES_OPTIONS
+);
     }
     if (ref === "branding") {
     }
@@ -188,8 +189,6 @@ $(function () {
 // }
 
 // init stars
-
-
 particlesJS("stars", PARTICLES_OPTIONS
 );
 
