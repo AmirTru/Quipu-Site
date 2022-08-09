@@ -128,6 +128,7 @@ function moveStart(ref) {
         }
     }
     if (ref === "research") {
+        theProcess.removeClass('research');
     }
     if (ref === "branding") {
     }
