@@ -228,7 +228,7 @@ $(window).resize(function () {
 });
 
 //get dot center and set text to it  
-function setToCenter(getCenter, itemToMove) {
+function setToCenter(getCenter, itemToMove, isRigthSide) {
 
     var $this = getCenter;
     var offset = $this.offset();
@@ -238,16 +238,20 @@ function setToCenter(getCenter, itemToMove) {
     var centerX = offset.left + width / 2;
     var centerY = offset.top + height / 2;
 
-    itemToMove.offset({ top: centerY - (itemToMove.height() / 2), left: centerX });
+    if (isRigthSide) {
+        itemToMove.offset({ top: centerY - (itemToMove.height() / 2), left: centerX });
+    } else {
+        itemToMove.offset({ top: centerY - (itemToMove.height() / 2), left: centerX (itemToMove.height() / 2)});
+    }
 }
 
 function researchSectionIn() {
     // theProcess.addClass('research');
     //aling text to dot
     //  theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
-    setToCenter($('.dot').eq(2), $('.process-text').eq(0));
-    setToCenter($('.dot').eq(0), $('.process-text').eq(1));
-    setToCenter($('.dot').eq(1), $('.process-text').eq(2));
+    setToCenter($('.dot').eq(2), $('.process-text').eq(0), true);
+    setToCenter($('.dot').eq(0), $('.process-text').eq(1), true);
+    setToCenter($('.dot').eq(1), $('.process-text').eq(2), true);
     //show text
     $('.process-text').eq(0).removeClass('hide-process-text');
     $('.process-text').eq(1).removeClass('hide-process-text');
@@ -260,10 +264,10 @@ function brandingSectionIn() {
     // theProcess.addClass('research');
     //aling text to dot
     //  theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
-    setToCenter($('.dot').eq(3), $('.process-text').eq(3));
-    setToCenter($('.dot').eq(6), $('.process-text').eq(4));
-    setToCenter($('.dot').eq(5), $('.process-text').eq(5));
-    setToCenter($('.dot').eq(4), $('.process-text').eq(6));
+    setToCenter($('.dot').eq(3), $('.process-text').eq(3), false);
+    setToCenter($('.dot').eq(6), $('.process-text').eq(4), false);
+    setToCenter($('.dot').eq(5), $('.process-text').eq(5), false);
+    setToCenter($('.dot').eq(4), $('.process-text').eq(6), false);
     //show text
     $('.process-text').eq(3).removeClass('hide-process-text');
     $('.process-text').eq(4).removeClass('hide-process-text');
