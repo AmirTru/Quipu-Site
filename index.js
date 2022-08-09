@@ -120,7 +120,7 @@ function moveStart(ref) {
         // movingToHeader();
     }
     if (ref === "process-starts") {
-      //  movingFromHeader();
+        //  movingFromHeader();
 
     }
     if (ref === "research") {
@@ -146,6 +146,7 @@ function moveEnd(ref) {
             console.log(window["pJSDom"].length);
             desroyStars();
         } else {
+            console.log(window["pJSDom"].length);
             particlesJS("stars", PARTICLES_OPTIONS
             );
         }
