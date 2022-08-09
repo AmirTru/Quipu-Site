@@ -168,18 +168,20 @@ function moveEnd(ref) {
 }
 
 //scrolling 
+var ref = "";
+
 $(function () {
     $.scrollify({
         section: ".s-scroll",
         easing: "linear",
         scrollSpeed: 2000,
         before: function (i, sscroll) {
-            var ref = sscroll[i].attr("data-section-name");
+            ref = sscroll[i].attr("data-section-name");
             moveStart(ref);
 
         },
         after: function (i, sscroll) {
-            var ref = sscroll[i].attr("data-section-name");
+            ref = sscroll[i].attr("data-section-name");
             moveEnd(ref);
         },
         afterResize: resizeText(ref),
@@ -194,8 +196,8 @@ function initialPosition() {
 
 }
 function resizeText(ref) {
-    if (ref === "research") {
 
+    if (ref === "research") {
         researchSectionIn();
     }
     if (ref === "branding") {
