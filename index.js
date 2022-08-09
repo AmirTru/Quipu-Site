@@ -196,7 +196,7 @@ function initialPosition() {
 
 }
 function resizeText(ref) {
-
+console.log(ref);
     if (ref === "research") {
         researchSectionIn();
     }
