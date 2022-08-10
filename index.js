@@ -1,5 +1,5 @@
 const theProcess = $('.the-process-lottie');
-const theProcessBG = $('.grad-bg .no-color');
+const theProcessBG = $('.grad-bg');
 const PARTICLES_OPTIONS = {
     "particles": {
         "number": {
