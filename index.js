@@ -115,8 +115,7 @@ jQuery(document).ready(function ($) {
 
     console.log("center - t " + offsetTop);
 
-    console.log("t " +
-        ($('.center').position().top - theProcess.height()));
+    console.log("t " + Math.abs(($('.center').position().top - theProcess.height())));
 
         theProcess.offset({ top:Math.abs(($('.center').position().top - theProcess.height())) - offsetTop});
 
