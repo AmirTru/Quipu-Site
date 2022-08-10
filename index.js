@@ -112,6 +112,7 @@ const PARTICLES_OPTIONS = {
 
 var offsetLeft = $('.center-dot-reference').position().left;
 var offsetTop = $('.center-dot-reference').position().top;
+console.log("l " + offsetLeft + "t " + offsetTop);
 
 $('.center').offset({ top: offsetTop - ($('.center').height() / 2), left: offsetLeft- ($('.center').width() / 2) });
 
