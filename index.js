@@ -114,6 +114,8 @@ jQuery(document).ready(function ($) {
     var offsetTop = $('.center-dot-reference').position().top;
     var centerOffsetTop = Math.abs(($('.center').position().top - theProcess.height()))
 
+    centerOffsetTop = $('.process-start').height() - centerOffsetTop;
+
     console.log("center - t " + offsetTop);
 
     console.log("t " + centerOffsetTop);
