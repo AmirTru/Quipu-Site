@@ -118,9 +118,9 @@ jQuery(document).ready(function ($) {
 
     console.log("t " + centerOffsetTop);
 
-    theProcess.offset({ top: centerOffsetTop + (centerOffsetTop - offsetTop) });
+    theProcess.offset({ top: centerOffsetTop - (centerOffsetTop - offsetTop) });
 
-    console.log(centerOffsetTop + (centerOffsetTop - offsetTop))
+    console.log(centerOffsetTop - (centerOffsetTop - offsetTop))
 
 });
 
