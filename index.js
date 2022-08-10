@@ -118,9 +118,9 @@ jQuery(document).ready(function ($) {
     console.log("t " +
         ($('.center').position().top - theProcess.height()));
 
-        theProcess.offset({ top:($('.center').position().top - theProcess.height()) - offsetTop});
+        theProcess.offset({ top:Math.abs(($('.center').position().top - theProcess.height()) - offsetTop)});
 
-        console.log(($('.center').position().top - theProcess.height()) - offsetTop)
+        console.log(Math.abs(($('.center').position().top - theProcess.height()) - offsetTop))
 
 });
 
