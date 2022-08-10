@@ -116,10 +116,13 @@ jQuery(document).ready(function ($) {
 
     console.log("center - t " + offsetTop + " l " + offsetLeft);
 
-    console.log("t " + 
-    (($('.center').position().top - theProcess.height()) * 1)
-    + " l " + $('.center').position().left);
+    console.log("t " +
+        ($('.center').position().top - theProcess.height())
+        + " l " + $('.center').position().left);
 
+        theProcess.offset({ top:($('.center').position().top - theProcess.height()) - offsetTop});
+
+        console.log(($('.center').position().top - theProcess.height()) - offsetTop)
 
 });
 
