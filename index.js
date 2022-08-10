@@ -111,14 +111,12 @@ const PARTICLES_OPTIONS = {
 }
 
 jQuery(document).ready(function ($) {
-    var offsetLeft = $('.center-dot-reference').position().left;
     var offsetTop = $('.center-dot-reference').position().top;
 
-    console.log("center - t " + offsetTop + " l " + offsetLeft);
+    console.log("center - t " + offsetTop);
 
     console.log("t " +
-        ($('.center').position().top - theProcess.height())
-        + " l " + $('.center').position().left);
+        ($('.center').position().top - theProcess.height()));
 
         theProcess.offset({ top:($('.center').position().top - theProcess.height()) - offsetTop});
 
