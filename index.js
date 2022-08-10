@@ -122,7 +122,7 @@ jQuery(document).ready(function ($) {
 
     theProcess.offset({ top: centerOffsetTop - (centerOffsetTop - offsetTop) - theProcess.height() });
 
-    console.log(centerOffsetTop - (centerOffsetTop - offsetTop) - theProcess.height())
+    console.log(centerOffsetTop + (centerOffsetTop - offsetTop) - theProcess.height())
 
 });
 
