@@ -129,6 +129,9 @@ function moveStart(ref) {
     if (ref === "process-starts") {
         if (window["pJSDom"] instanceof Array && window["pJSDom"].length > 0) {
             movingFromHeader();
+            if (!theProcessBG.hasClass('no-color')) {
+                theProcessBG.addClass('no-color');
+            }
         }
     }
     if (ref === "research") {
