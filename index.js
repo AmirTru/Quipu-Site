@@ -120,9 +120,9 @@ jQuery(document).ready(function ($) {
 
     console.log("t " + centerOffsetTop);
 
-    theProcess.offset({ top: centerOffsetTop - (centerOffsetTop - offsetTop) - theProcess.height() });
+    theProcess.offset({ top: centerOffsetTop + (centerOffsetTop - offsetTop) - theProcess.height() });
 
-    console.log(centerOffsetTop - (centerOffsetTop + offsetTop) - theProcess.height())
+    console.log(centerOffsetTop + (centerOffsetTop - offsetTop) - theProcess.height())
 
 });
 
