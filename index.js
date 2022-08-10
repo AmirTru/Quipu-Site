@@ -114,7 +114,7 @@ var offsetLeft = $('.center-dot-reference').position().left;
 var offsetTop = $('.center-dot-reference').position().top;
 console.log("l " + offsetLeft + "t " + offsetTop);
 
-$('.center').offset({ top: offsetTop - ($('.center').height() / 2), left: offsetLeft- ($('.center').width() / 2) });
+$('.center').offset({ top: offsetTop, left: offsetLeft });
 
 
 function moveStart(ref) {
@@ -134,7 +134,7 @@ function moveStart(ref) {
     if (ref === "process-starts") {
         if (window["pJSDom"] instanceof Array && window["pJSDom"].length > 0) {
             movingFromHeader();
-            
+
         }
     }
     if (ref === "research") {
