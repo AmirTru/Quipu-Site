@@ -1,4 +1,5 @@
 const theProcess = $('.the-process-lottie');
+const theProcessBG = $('.grad-bg .no-color');
 const PARTICLES_OPTIONS = {
     "particles": {
         "number": {
@@ -110,10 +111,10 @@ const PARTICLES_OPTIONS = {
     "retina_detect": true
 }
 
+
 function moveStart(ref) {
     //hide text & scale down "the process"
     $('.process-text').addClass('hide-process-text');
-    //theProcess.removeClass('anchored');
 
     //restore only one class 
     jQuery('#the-process-lottie').attr('class', 'the-process-lottie');
@@ -129,6 +130,7 @@ function moveStart(ref) {
         if (window["pJSDom"] instanceof Array && window["pJSDom"].length > 0) {
             movingFromHeader();
         }
+        theProcessBG.removeClass('no-color');
     }
     if (ref === "research") {
         theProcess.removeClass('research');
