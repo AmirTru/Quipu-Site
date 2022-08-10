@@ -130,18 +130,24 @@ function moveStart(ref) {
         if (window["pJSDom"] instanceof Array && window["pJSDom"].length > 0) {
             movingFromHeader();
         }
-        theProcessBG.removeClass('no-color');
     }
     if (ref === "research") {
+        theProcessBG.removeClass('no-color');
         theProcess.removeClass('research');
     }
     if (ref === "branding") {
+        theProcessBG.addClass('r');
     }
     if (ref === "briefing") {
+        if (!theProcessBG.hasClass('r')) {
+            theProcessBG.addClass('r');
+        }
     }
     if (ref === "design") {
+        theProcessBG.removeClass('r');
     }
     if (ref === "development") {
+        theProcessBG.addClass('r');
     }
 }
 function moveEnd(ref) {
