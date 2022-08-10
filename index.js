@@ -116,8 +116,9 @@ jQuery(document).ready(function ($) {
 
     console.log("center - t " + offsetTop + " l " + offsetLeft);
 
-    console.log("t " + $('.center').position().top + " l " + $('.center').position().left);
-    console.log("t " + $('.center').offset().top + " l " + $('.center').offset().left);
+    console.log("t " + 
+    ($('.center').position().top - theProcess.height() * 1)
+    + " l " + $('.center').position().left);
 
 
 });
