@@ -120,7 +120,7 @@ jQuery(document).ready(function ($) {
 
     theProcess.offset({ top: centerOffsetTop + (centerOffsetTop - offsetTop) });
 
-    console.log(centerOffsetTop - offsetTop)
+    console.log(centerOffsetTop + (centerOffsetTop - offsetTop))
 
 });
 
