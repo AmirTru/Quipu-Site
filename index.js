@@ -1,5 +1,4 @@
 const theProcess = $('.the-process-lottie');
-const theProcessBG = $('.grad-bg');
 const PARTICLES_OPTIONS = {
     "particles": {
         "number": {
@@ -111,6 +110,11 @@ const PARTICLES_OPTIONS = {
     "retina_detect": true
 }
 
+var offsetLeft = $('.center-dot-reference').position().left;
+var offsetTop = $('.center-dot-reference').position().top;
+
+$('.center').offset({ top: offsetTop - ($('.center').height() / 2), left: offsetLeft- ($('.center').width() / 2) });
+
 
 function moveStart(ref) {
     //hide text & scale down "the process"
@@ -129,31 +133,21 @@ function moveStart(ref) {
     if (ref === "process-starts") {
         if (window["pJSDom"] instanceof Array && window["pJSDom"].length > 0) {
             movingFromHeader();
-            if (!theProcessBG.hasClass('no-color')) {
-                theProcessBG.addClass('no-color');
-            }
+            
         }
     }
     if (ref === "research") {
-        theProcessBG.removeClass('no-color');
-        if (theProcessBG.hasClass('r')) {
-            theProcessBG.removeClass('r');
-        }
         theProcess.removeClass('research');
     }
     if (ref === "branding") {
-        theProcessBG.addClass('r');
     }
     if (ref === "briefing") {
-        if (!theProcessBG.hasClass('r')) {
-            theProcessBG.addClass('r');
-        }
     }
     if (ref === "design") {
-        theProcessBG.removeClass('r');
     }
     if (ref === "development") {
-        theProcessBG.addClass('r');
+    }
+    if (ref === "process-ends") {
     }
 }
 function moveEnd(ref) {
@@ -197,6 +191,8 @@ function moveEnd(ref) {
     }
     if (ref === "development") {
         developmentSectionIn();
+    }
+    if (ref === "process-ends") {
     }
 }
 
@@ -259,6 +255,8 @@ function resizeText() {
     }
     if (current === "development") {
         developmentSectionIn();
+    }
+    if (ref === "process-ends") {
     }
 }
 
