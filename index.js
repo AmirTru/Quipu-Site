@@ -133,6 +133,9 @@ function moveStart(ref) {
     }
     if (ref === "research") {
         theProcessBG.removeClass('no-color');
+        if (theProcessBG.hasClass('r')) {
+            theProcessBG.removeClass('r');
+        }
         theProcess.removeClass('research');
     }
     if (ref === "branding") {
