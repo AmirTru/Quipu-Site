@@ -117,7 +117,7 @@ jQuery(document).ready(function ($) {
     console.log("center - t " + offsetTop + " l " + offsetLeft);
 
     console.log("t " + 
-    ($('.center').position().top - theProcess.height() * 1)
+    (($('.center').position().top - theProcess.height()) * 1)
     + " l " + $('.center').position().left);
 
 
