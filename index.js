@@ -112,7 +112,9 @@ const PARTICLES_OPTIONS = {
 
 jQuery(document).ready(function ($) {
     var offsetTop = $('.center-dot-reference').position().top;
-    var centerTheProccesDif = Math.abs(($('.center').position().top - theProcess.height()))
+    var theProcessHeigthBefore = theProcess.height()
+    var centerTheProccesDif = Math.abs(($('.center').position().top - theProcessHeigthBefore))
+
 
     var centerOffsetTop = $('.process-start').height() - centerTheProccesDif;
 
@@ -121,9 +123,10 @@ jQuery(document).ready(function ($) {
 
     var dotOffset = (centerOffsetTop + (centerOffsetTop - offsetTop - centerTheProccesDif) - theProcess.height())
 
-    theProcess.offset({ top: dotOffset-centerOffsetTop });
+    theProcess.offset({ top: dotOffset - centerOffsetTop });
 
-    console.log("theProcess - " + theProcess.height() + "\n"
+    console.log("theProcessHeigthBefore- " + theProcessHeigthBefore + "\n" +
+        "theProcess now- " + theProcess.height() + "\n"
         + "centerOffsetTop - " + centerOffsetTop + "\n" +
         "centerTheProccesDif - " + centerTheProccesDif + "\n" +
         "dotOffset - " + dotOffset)
