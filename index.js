@@ -115,7 +115,9 @@ jQuery(document).ready(function ($) {
     var offsetTop = $('.center-dot-reference').position().top;
     console.log("l " + offsetLeft + "t " + offsetTop);
 
-    theProcess.position({ top: offsetTop, left: offsetLeft });
+    theProcess.css('top', offsetTop);
+
+    theProcess.css('left', offsetLeft);
 });
 
 
