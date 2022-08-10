@@ -112,14 +112,15 @@ const PARTICLES_OPTIONS = {
 
 jQuery(document).ready(function ($) {
     var offsetTop = $('.center-dot-reference').position().top;
+    var centerOffsetTop = Math.abs(($('.center').position().top - theProcess.height()))
 
     console.log("center - t " + offsetTop);
 
-    console.log("t " + Math.abs(($('.center').position().top - theProcess.height())));
+    console.log("t " + centerOffsetTop);
 
-        theProcess.offset({ top:Math.abs(($('.center').position().top - theProcess.height())) - offsetTop});
+    theProcess.offset({ top: centerOffsetTop - offsetTop });
 
-        console.log(Math.abs(($('.center').position().top - theProcess.height())) - offsetTop)
+    console.log(centerOffsetTop - offsetTop)
 
 });
 
