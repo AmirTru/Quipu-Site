@@ -123,7 +123,7 @@ jQuery(document).ready(function ($) {
 
     var dotOffset = (centerOffsetTop + (centerOffsetTop - offsetTop - centerTheProccesDif) - theProcess.height())
 
-    theProcess.offset({ top: dotOffset - centerOffsetTop });
+    theProcess.offset({ top: dotOffset });
 
     console.log("theProcessHeigthBefore- " + theProcessHeigthBefore + "\n" +
         "theProcess now- " + theProcess.height() + "\n"
