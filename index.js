@@ -110,32 +110,6 @@ const PARTICLES_OPTIONS = {
     "retina_detect": true
 }
 
-jQuery(document).ready(function ($) {
-    var offsetTop = $('.center-dot-reference').position().top;
-    var theProcessHeigthBefore = theProcess.height()
-    var centerTheProccesDif = Math.abs(($('.center').position().top - theProcessHeigthBefore))
-
-
-    var centerOffsetTop = $('.process-start').height() - centerTheProccesDif;
-
-
-
-
-    var dotOffset = (centerOffsetTop - offsetTop) ;
-
-    theProcess.offset({ top: -dotOffset });
-
-    console.log("theProcessHeigthBefore- " + theProcessHeigthBefore + "\n" +
-        "theProcess now- " + theProcess.height() + "\n"
-        + "centerOffsetTop - " + centerOffsetTop + "\n" +
-        "centerTheProccesDif - " + centerTheProccesDif + "\n" +
-        "dotOffset - " + dotOffset)
-
-});
-
-
-
-
 function moveStart(ref) {
     //hide text & scale down "the process"
     $('.process-text').addClass('hide-process-text');
