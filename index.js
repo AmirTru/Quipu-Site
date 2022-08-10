@@ -114,7 +114,7 @@ jQuery(document).ready(function ($) {
     var offsetLeft = $('.center-dot-reference').position().left;
     var offsetTop = $('.center-dot-reference').position().top;
 
-    console.log($('.center').position().top);
+    console.log("t " + $('.center').position().top + " l " + $('.center').position().left);
 
 
 
