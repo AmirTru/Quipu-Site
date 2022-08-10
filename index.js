@@ -116,15 +116,16 @@ jQuery(document).ready(function ($) {
 
     var centerOffsetTop = $('.process-start').height() - centerTheProccesDif;
 
-    console.log("center - t " + offsetTop);
 
-    console.log("t " + centerOffsetTop);
+
 
     var dotOffset = (centerOffsetTop + (centerOffsetTop - offsetTop - centerTheProccesDif) - theProcess.height())
 
     theProcess.offset({ top: dotOffset });
 
-    console.log(dotOffset)
+    console.log("theProcess - " + theProcess.height() + "/n"
+     + "centerOffsetTop - " + centerOffsetTop + "/n" + 
+     "centerTheProccesDif - " + centerTheProccesDif)
 
 });
 
