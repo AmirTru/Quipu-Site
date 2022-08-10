@@ -110,11 +110,15 @@ const PARTICLES_OPTIONS = {
     "retina_detect": true
 }
 
-var offsetLeft = $('.center-dot-reference').position().left;
-var offsetTop = $('.center-dot-reference').position().top;
-console.log("l " + offsetLeft + "t " + offsetTop);
+jQuery(document).ready(function ($) {
+    var offsetLeft = $('.center-dot-reference').position().left;
+    var offsetTop = $('.center-dot-reference').position().top;
+    console.log("l " + offsetLeft + "t " + offsetTop);
 
-$('.center').offset({ top: offsetTop, left: offsetLeft });
+    $('.center').offset({ top: offsetTop, left: offsetLeft });
+});
+
+
 
 
 function moveStart(ref) {
