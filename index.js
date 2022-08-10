@@ -120,7 +120,7 @@ jQuery(document).ready(function ($) {
 
     console.log("t " + centerOffsetTop);
 
-    var dotOffset = ((centerOffsetTop + offsetTop) - theProcess.height())
+    var dotOffset = ((centerOffsetTop + offsetTop + centerTheProccesDif) - theProcess.height())
 
     theProcess.offset({ top: dotOffset });
 
