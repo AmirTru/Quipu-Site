@@ -124,8 +124,9 @@ jQuery(document).ready(function ($) {
     theProcess.offset({ top: dotOffset });
 
     console.log("theProcess - " + theProcess.height() + "\n"
-     + "centerOffsetTop - " + centerOffsetTop + "\n" + 
-     "centerTheProccesDif - " + centerTheProccesDif)
+        + "centerOffsetTop - " + centerOffsetTop + "\n" +
+        "centerTheProccesDif - " + centerTheProccesDif + "\n" +
+        "dotOffset - " + dotOffset)
 
 });
 
