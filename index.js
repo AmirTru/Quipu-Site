@@ -123,8 +123,8 @@ jQuery(document).ready(function ($) {
 
     theProcess.offset({ top: dotOffset });
 
-    console.log("theProcess - " + theProcess.height() + "/n"
-     + "centerOffsetTop - " + centerOffsetTop + "/n" + 
+    console.log("theProcess - " + theProcess.height() + "\n"
+     + "centerOffsetTop - " + centerOffsetTop + "\n" + 
      "centerTheProccesDif - " + centerTheProccesDif)
 
 });
