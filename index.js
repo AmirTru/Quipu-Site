@@ -329,6 +329,7 @@ function researchSectionIn() {
 }
 
 $('.process-text-h-and-info-wrapper').on('mouseenter', function() {
+    console.log('hover');
     $(this).find('.process-text-header').removeClass('closed');
     $(this).find('.process-info-text-wrapper').removeClass('closed');
   });
