@@ -337,27 +337,21 @@ function researchSectionIn() {
     processTextWrapper.eq(0).removeClass('hide-process-text');
     processTextWrapper.eq(1).removeClass('hide-process-text');
     processTextWrapper.eq(2).removeClass('hide-process-text');
-
-
 }
 
 
 
 function brandingSectionIn() {
-    // theProcess.addClass('research');
     //aling text to dot
-    //  theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
-    setToCenter($('.dot').eq(3), $('.process-text').eq(3), false);
-    setToCenter($('.dot').eq(6), $('.process-text').eq(4), false);
-    setToCenter($('.dot').eq(5), $('.process-text').eq(5), false);
-    setToCenter($('.dot').eq(4), $('.process-text').eq(6), false);
+    setToCenter($('.dot').eq(3), processTextWrapper.eq(3), false);
+    setToCenter($('.dot').eq(6), processTextWrapper.eq(4), false);
+    setToCenter($('.dot').eq(5), processTextWrapper.eq(5), false);
+    setToCenter($('.dot').eq(4), processTextWrapper.eq(6), false);
     //show text
-    $('.process-text').eq(3).removeClass('hide-process-text');
-    $('.process-text').eq(4).removeClass('hide-process-text');
-    $('.process-text').eq(5).removeClass('hide-process-text');
-    $('.process-text').eq(6).removeClass('hide-process-text');
-    // });
-
+    processTextWrapper.eq(3).removeClass('hide-process-text');
+    processTextWrapper.eq(4).removeClass('hide-process-text');
+    processTextWrapper.eq(5).removeClass('hide-process-text');
+    processTextWrapper.eq(6).removeClass('hide-process-text');
 }
 
 function briefingSectionIn() {
