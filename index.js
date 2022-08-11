@@ -299,7 +299,6 @@ function setToCenter(getCenter, itemToMove, isRigthSide) {
 
     var $this = getCenter;
     var offset = $this.offset();
-    console.log($this.offset());
     var width = $this[0].getBoundingClientRect().width;
     var height = $this[0].getBoundingClientRect().height;
 
