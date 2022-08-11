@@ -319,7 +319,7 @@ var processTextWrapper = $('.process-text-h-and-info-wrapper');
 processTextWrapper.on('mouseenter', function () {
     $(this).find('.process-text-header').removeClass('closed');
     $(this).find('.process-info-text-wrapper').removeClass('closed');
-    processTextWrapper.siblinge(processTextWrapper).css('opacity', '0.0');
+    $(this).siblings(processTextWrapper).css('opacity', '0.0');
 });
 
 processTextWrapper.on('mouseleave', function () {
