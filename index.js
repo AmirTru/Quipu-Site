@@ -317,11 +317,11 @@ function setToCenter(getCenter, itemToMove, isRigthSide) {
 
 function researchSectionIn() {
     //aling text to dot
-    setToCenter($('.dot').eq(2), $('.process-text').eq(0), true);
+    setToCenter($('.dot').eq(2), $('.process-text-h-and-info-wrapper').eq(0), true);
     setToCenter($('.dot').eq(0), $('.process-text').eq(1), true);
     setToCenter($('.dot').eq(1), $('.process-text').eq(2), true);
     //show text
-    $('.process-text').eq(0).removeClass('hide-process-text');
+    $('.process-text-h-and-info-wrapper').eq(0).removeClass('hide-process-text');
     $('.process-text').eq(1).removeClass('hide-process-text');
     $('.process-text').eq(2).removeClass('hide-process-text');
 
