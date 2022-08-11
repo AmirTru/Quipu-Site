@@ -320,6 +320,7 @@ function researchSectionIn() {
     //aling text to dot
     //  theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
     setToCenter($('.txt').eq(2), $('.process-text').eq(0), true);
+    setToCenter($('.dot').eq(2), $('.process-text').eq(0), true);
     setToCenter($('.txt').eq(0), $('.process-text').eq(1), true);
     setToCenter($('.txt').eq(1), $('.process-text').eq(2), true);
     //show text
