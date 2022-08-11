@@ -189,7 +189,12 @@ function moveEnd(ref) {
         });
     }
     if (ref === "development") {
-        developmentSectionIn();
+        theProcess.addClass('site-development');
+        $('.briefing').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
+            if ($('#the-process-lottie').hasClass('site-development')) {
+                developmentSectionIn();
+            }
+        });
     }
     if (ref === "process-ends") {
     }
