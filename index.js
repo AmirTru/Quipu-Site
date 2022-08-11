@@ -327,11 +327,15 @@ function researchSectionIn() {
 
 }
 
-$('.process-text-h-and-info-wrapper').on('mouseenter', function() {
-    console.log('hover');
+$('.process-text-h-and-info-wrapper').on('mouseenter', function () {
     $(this).find('.process-text-header').removeClass('closed');
     $(this).find('.process-info-text-wrapper').removeClass('closed');
-  });
+});
+
+$('.process-text-h-and-info-wrapper').on('mouseleave', function () {
+    $(this).find('.process-text-header').addClass('closed');
+    $(this).find('.process-info-text-wrapper').addClass('closed');
+});
 
 function brandingSectionIn() {
     // theProcess.addClass('research');
