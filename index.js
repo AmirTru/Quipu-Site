@@ -317,9 +317,9 @@ function researchSectionIn() {
     // theProcess.addClass('research');
     //aling text to dot
     //  theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
-    setToCenter($('.dot').eq(2), $('.process-text').eq(0), true);
-    setToCenter($('.dot').eq(0), $('.process-text').eq(1), true);
-    setToCenter($('.dot').eq(1), $('.process-text').eq(2), true);
+    setToCenter($('.txt').eq(2), $('.process-text').eq(0), true);
+    setToCenter($('.txt').eq(0), $('.process-text').eq(1), true);
+    setToCenter($('.txt').eq(1), $('.process-text').eq(2), true);
     //show text
     $('.process-text').eq(0).removeClass('hide-process-text');
     $('.process-text').eq(1).removeClass('hide-process-text');
