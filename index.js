@@ -319,11 +319,13 @@ var processTextWrapper = $('.process-text-h-and-info-wrapper');
 $('.process-text-h-and-info-wrapper').on('mouseenter', function () {
     $(this).find('.process-text-header').removeClass('closed');
     $(this).find('.process-info-text-wrapper').removeClass('closed');
+    processTextWrapper.css('opacity', '0.0');
 });
 
 $('.process-text-h-and-info-wrapper').on('mouseleave', function () {
     $(this).find('.process-text-header').addClass('closed');
     $(this).find('.process-info-text-wrapper').addClass('closed');
+    processTextWrapper.css('opacity', '1');
 });
 
 function researchSectionIn() {
