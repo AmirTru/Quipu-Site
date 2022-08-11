@@ -1,5 +1,5 @@
 const theProcess = $('.the-process-lottie');
-$('.txt').show();
+var processTextWrapper = $('.process-text-h-and-info-wrapper');
 const PARTICLES_OPTIONS = {
     "particles": {
         "number": {
@@ -113,7 +113,7 @@ const PARTICLES_OPTIONS = {
 
 function moveStart(ref) {
     //hide text & scale down "the process"
-    $('.process-text').addClass('hide-process-text');
+    processTextWrapper.addClass('hide-process-text');
 
     //restore only one class 
     jQuery('#the-process-lottie').attr('class', 'the-process-lottie');
@@ -313,8 +313,6 @@ function setToCenter(getCenter, itemToMove, isRigthSide) {
         itemToMove.offset({ top: centerY - (itemToMove.height() / 2), left: centerX - itemToMove.width() - (percent * 3) });
     }
 }
-
-var processTextWrapper = $('.process-text-h-and-info-wrapper');
 
 processTextWrapper.on('mouseenter', function () {
     $(this).find('.process-text-header').removeClass('closed');
