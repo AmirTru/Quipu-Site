@@ -181,7 +181,12 @@ function moveEnd(ref) {
         });
     }
     if (ref === "design") {
-        designSectionIn();
+        theProcess.addClass('site-design');
+        $('.briefing').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
+            if ($('#the-process-lottie').hasClass('site-design')) {
+                designSectionIn();
+            }
+        });
     }
     if (ref === "development") {
         developmentSectionIn();
