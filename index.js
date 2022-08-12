@@ -161,7 +161,7 @@ function moveEnd(ref) {
     if (ref === "research") {
         proceseSphere.addClass('research');
         theProcess.addClass('research');
-        $('.research').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
+        $('.the-process-lottie .research').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
             if ($('#the-process-lottie').hasClass('research')) {
                 researchSectionIn();
             }
@@ -170,7 +170,7 @@ function moveEnd(ref) {
     }
     if (ref === "branding") {
         theProcess.addClass('branding');
-        $('.branding').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
+        $('.the-process-lottie .branding').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
             console.log('ani endes')
             if ($('#the-process-lottie').hasClass('branding')) {
                 console.log('has class')
@@ -180,7 +180,7 @@ function moveEnd(ref) {
     }
     if (ref === "briefing") {
         theProcess.addClass('briefing');
-        $('.briefing').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
+        $('.the-process-lottie .briefing').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
             if ($('#the-process-lottie').hasClass('briefing')) {
                 briefingSectionIn();
             }
@@ -188,7 +188,7 @@ function moveEnd(ref) {
     }
     if (ref === "design") {
         theProcess.addClass('site-design');
-        $('.briefing').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
+        $('.the-process-lottie .briefing').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
             if ($('#the-process-lottie').hasClass('site-design')) {
                 designSectionIn();
             }
@@ -196,7 +196,7 @@ function moveEnd(ref) {
     }
     if (ref === "development") {
         theProcess.addClass('site-development');
-        $('.briefing').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
+        $('.the-process-lottie .briefing').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
             if ($('#the-process-lottie').hasClass('site-development')) {
                 developmentSectionIn();
             }
