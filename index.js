@@ -149,6 +149,10 @@ function moveStart(ref) {
 }
 function moveEnd(ref) {
 
+    //size up the sphere 
+    proceseSphere.addClass('ancord');
+
+    //fire op the text after animathion is iver on the process
     theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
         if ($('#the-process-lottie').hasClass('research')) {
             researchSectionIn();
@@ -176,8 +180,7 @@ function moveEnd(ref) {
             desroyStars();
         }
     }
-    if (ref === "research") {
-        proceseSphere.addClass('research');
+    if (ref === "research") {   
         theProcess.addClass('research');
     }
     if (ref === "branding") {
