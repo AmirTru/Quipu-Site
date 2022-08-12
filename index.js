@@ -115,10 +115,12 @@ const PARTICLES_OPTIONS = {
 function moveStart(ref) {
     //hide text & scale down "the process"
     processTextWrapper.addClass('hide-process-text');
+    $('.grad-l').addClass('hide');
+    $('.grad-r').addClass('hide');
 
     //restore only one class 
     jQuery('#the-process-lottie').attr('class', 'the-process-lottie');
-    jQuery('#grad').addClass('hide');
+    
    // jQuery('#sphere-the-process').attr('class', 'sphere-the-process');
 
     if (ref === "hero") {
