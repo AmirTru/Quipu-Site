@@ -117,6 +117,7 @@ function moveStart(ref) {
     processTextWrapper.addClass('hide-process-text');
     $('.grad-l').addClass('hide');
     $('.grad-r').addClass('hide');
+    $('.connections-1').addClass('hide-l');
 
     //restore only one class 
     jQuery('#the-process-lottie').attr('class', 'the-process-lottie');
