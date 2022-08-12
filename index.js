@@ -157,6 +157,7 @@ function moveEnd(ref) {
         }
     }
     if (ref === "research") {
+        $('.sphere-the-procese').addClass('research');
         theProcess.addClass('research');
         $('.research').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
             if ($('#the-process-lottie').hasClass('research')) {
