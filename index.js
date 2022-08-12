@@ -171,7 +171,9 @@ function moveEnd(ref) {
     if (ref === "branding") {
         theProcess.addClass('branding');
         $('.branding').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
+            console.log('ani endes')
             if ($('#the-process-lottie').hasClass('branding')) {
+                console.log('has class')
                 brandingSectionIn();
             }
         });
