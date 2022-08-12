@@ -149,6 +149,24 @@ function moveStart(ref) {
 }
 function moveEnd(ref) {
 
+    theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
+        if ($('#the-process-lottie').hasClass('research')) {
+            researchSectionIn();
+        }
+        if ($('#the-process-lottie').hasClass('branding')) {
+            brandingSectionIn();
+        }
+        if ($('#the-process-lottie').hasClass('briefing')) {
+            briefingSectionIn();
+        }
+        if ($('#the-process-lottie').hasClass('site-design')) {
+            designSectionIn();
+        }
+        if ($('#the-process-lottie').hasClass('site-development')) {
+            developmentSectionIn();
+        }
+    });
+
 
     if (ref === "hero") {
 
@@ -161,46 +179,18 @@ function moveEnd(ref) {
     if (ref === "research") {
         proceseSphere.addClass('research');
         theProcess.addClass('research');
-        $('.research').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
-            if ($('#the-process-lottie').hasClass('research')) {
-                researchSectionIn();
-            }
-        });
-
     }
     if (ref === "branding") {
         theProcess.addClass('branding');
-        $('.branding').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
-            console.log('ani endes')
-            if ($('#the-process-lottie').hasClass('branding')) {
-                console.log('has class')
-                brandingSectionIn();
-            }
-        });
     }
     if (ref === "briefing") {
         theProcess.addClass('briefing');
-        $('.briefing').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
-            if ($('#the-process-lottie').hasClass('briefing')) {
-                briefingSectionIn();
-            }
-        });
     }
     if (ref === "design") {
         theProcess.addClass('site-design');
-        $('.briefing').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
-            if ($('#the-process-lottie').hasClass('site-design')) {
-                designSectionIn();
-            }
-        });
     }
     if (ref === "development") {
         theProcess.addClass('site-development');
-        $('.briefing').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
-            if ($('#the-process-lottie').hasClass('site-development')) {
-                developmentSectionIn();
-            }
-        });
     }
     if (ref === "process-ends") {
     }
