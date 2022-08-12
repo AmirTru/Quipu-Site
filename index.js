@@ -118,6 +118,7 @@ function moveStart(ref) {
 
     //restore only one class 
     jQuery('#the-process-lottie').attr('class', 'the-process-lottie');
+    jQuery('#grad').addClass('hide');
    // jQuery('#sphere-the-process').attr('class', 'sphere-the-process');
 
     if (ref === "hero") {
@@ -182,18 +183,23 @@ function moveEnd(ref) {
     }
     if (ref === "research") {   
         theProcess.addClass('research');
+        $('.grad-l').removeClass('hide');
     }
     if (ref === "branding") {
         theProcess.addClass('branding');
+        $('.grad-r').removeClass('hide');
     }
     if (ref === "briefing") {
         theProcess.addClass('briefing');
+        $('.grad-r').removeClass('hide');
     }
     if (ref === "design") {
         theProcess.addClass('site-design');
+        $('.grad-l').removeClass('hide');
     }
     if (ref === "development") {
         theProcess.addClass('site-development');
+        $('.grad-r').removeClass('hide');
     }
     if (ref === "process-ends") {
     }
