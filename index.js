@@ -312,13 +312,13 @@ function setToCenter(getCenter, itemToMove, isRigthSide) {
 processTextWrapper.on('mouseenter', function () {
     $(this).find('.process-text-header').removeClass('closed');
     $(this).find('.process-info-text-wrapper').removeClass('closed');
-    $(this).siblings(processTextWrapper).not(theProcess).css('opacity', '0.0');
+    $(this).siblings(processTextWrapper).not(proceseSphere).not(theProcess).css('opacity', '0.0');
 });
 
 processTextWrapper.on('mouseleave', function () {
     $(this).find('.process-text-header').addClass('closed');
     $(this).find('.process-info-text-wrapper').addClass('closed');
-    $(this).siblings(processTextWrapper).not(theProcess).css('opacity', '1');
+    $(this).siblings(processTextWrapper).not(proceseSphere).not(theProcess).css('opacity', '1');
 });
 
 function researchSectionIn() {
