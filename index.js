@@ -118,7 +118,7 @@ function moveStart(ref) {
 
     //restore only one class 
     jQuery('#the-process-lottie').attr('class', 'the-process-lottie');
-    jQuery('#sphere-the-process').attr('class', 'sphere-the-process');
+   // jQuery('#sphere-the-process').attr('class', 'sphere-the-process');
 
     if (ref === "hero") {
         if (window["pJSDom"] instanceof Array && window["pJSDom"].length == 0) {
@@ -150,7 +150,7 @@ function moveStart(ref) {
 function moveEnd(ref) {
 
     //size up the sphere 
-    proceseSphere.addClass('ancord');
+   // proceseSphere.addClass('ancord');
 
     //fire op the text after animathion is iver on the process
     theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
