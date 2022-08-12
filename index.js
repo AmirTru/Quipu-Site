@@ -185,6 +185,7 @@ function moveEnd(ref) {
     }
     if (ref === "research") {   
         theProcess.addClass('research');
+        $('.connections-1').removeClass('hide-l');
         $('.grad-l').removeClass('hide');
     }
     if (ref === "branding") {
