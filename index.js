@@ -143,9 +143,15 @@ function moveStart(ref) {
         if (!theProcess.hasClass('research')); {
             theProcess.addClass('research');
             $('.connections-1').removeClass('hide-l');
+            $('.grad-l').removeClass('hide');
         }
     }
     if (ref === "branding") {
+        if (!theProcess.hasClass('research')); {
+            theProcess.addClass('branding');
+            $('.connections-2').removeClass('hide-r');
+            $('.grad-r').removeClass('hide');
+        }
     }
     if (ref === "briefing") {
     }
