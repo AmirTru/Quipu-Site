@@ -340,9 +340,9 @@ processTextWrapper.on('mouseleave', function () {
 
 function researchSectionIn() {
     //aling text to dot
-    setToCenter($('.dot').eq(2), processTextWrapper.eq(0), true);
-    setToCenter($('.dot').eq(0), processTextWrapper.eq(1), true);
-    setToCenter($('.dot').eq(1), processTextWrapper.eq(2), true);
+    setToCenter($('.txt').eq(2), processTextWrapper.eq(0), true);
+    setToCenter($('.txt').eq(0), processTextWrapper.eq(1), true);
+    setToCenter($('.txt').eq(1), processTextWrapper.eq(2), true);
     //show text
     processTextWrapper.eq(0).removeClass('hide-process-text');
     processTextWrapper.eq(1).removeClass('hide-process-text');
@@ -353,10 +353,10 @@ function researchSectionIn() {
 
 function brandingSectionIn() {
     //aling text to dot
-    setToCenter($('.dot').eq(3), processTextWrapper.eq(3), false);
-    setToCenter($('.dot').eq(6), processTextWrapper.eq(4), false);
-    setToCenter($('.dot').eq(5), processTextWrapper.eq(5), false);
-    setToCenter($('.dot').eq(4), processTextWrapper.eq(6), false);
+    setToCenter($('.txt').eq(3), processTextWrapper.eq(3), false);
+    setToCenter($('.txt').eq(6), processTextWrapper.eq(4), false);
+    setToCenter($('.txt').eq(5), processTextWrapper.eq(5), false);
+    setToCenter($('.txt').eq(4), processTextWrapper.eq(6), false);
     //show text
     processTextWrapper.eq(3).removeClass('hide-process-text');
     processTextWrapper.eq(4).removeClass('hide-process-text');
