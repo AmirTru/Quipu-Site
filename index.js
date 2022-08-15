@@ -151,7 +151,7 @@ gsap.to("#sphere-the-process", {
     ease: "power1.inOut",
     motionPath: {
         path: "M 400 600 Q 150 500 250 250 Q 400 0 500 0 Q 800 0 700 500 ",
-        align: "M 400 600 Q 150 500 250 250 Q 400 0 500 0 Q 800 0 700 500 ",
+       // align: "M 400 600 Q 150 500 250 250 Q 400 0 500 0 Q 800 0 700 500 ",
         autoRotate: true,
         alignOrigin: [0.5, 0.5]
     }
