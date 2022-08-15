@@ -114,7 +114,7 @@ const PARTICLES_OPTIONS = {
 
 function moveStart(ref) {
     //hide text & scale down "the process"
-    // processTextWrapper.addClass('hide-process-text');
+    processTextWrapper.addClass('hide-process-text');
     // $('.grad-l').addClass('hide');
     // $('.grad-r').addClass('hide');
     // $('.connections-1').addClass('hide-l');
