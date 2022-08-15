@@ -123,8 +123,8 @@ function moveStart(ref) {
 
     //restore only one class 
     jQuery('#the-process-lottie').attr('class', 'the-process-lottie');
-    
-   // jQuery('#sphere-the-process').attr('class', 'sphere-the-process');
+
+    // jQuery('#sphere-the-process').attr('class', 'sphere-the-process');
 
     if (ref === "hero") {
         if (window["pJSDom"] instanceof Array && window["pJSDom"].length == 0) {
@@ -140,8 +140,10 @@ function moveStart(ref) {
         }
     }
     if (ref === "research") {
-        theProcess.addClass('research');
-        $('.connections-1').removeClass('hide-l');
+        if (!theProcess.hasClass('research')); {
+            theProcess.addClass('research');
+            $('.connections-1').removeClass('hide-l');
+        }
     }
     if (ref === "branding") {
     }
@@ -157,12 +159,12 @@ function moveStart(ref) {
 function moveEnd(ref) {
 
     //size up the sphere 
-   // proceseSphere.addClass('ancord');
+    // proceseSphere.addClass('ancord');
 
     //fire op the text after animathion is iver on the process
     theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
         if ($('#the-process-lottie').hasClass('research')) {
-
+            researchSectionIn();
         }
         if ($('#the-process-lottie').hasClass('branding')) {
             brandingSectionIn();
@@ -187,10 +189,10 @@ function moveEnd(ref) {
             desroyStars();
         }
     }
-    if (ref === "research") {   
-        researchSectionIn();
-     //   $('.connections-1').removeClass('hide-l');
-     //   $('.grad-l').removeClass('hide');
+    if (ref === "research") {
+
+        //   $('.connections-1').removeClass('hide-l');
+        //   $('.grad-l').removeClass('hide');
     }
     if (ref === "branding") {
         theProcess.addClass('branding');
@@ -321,7 +323,7 @@ function setToCenter(getCenter, itemToMove, isRigthSide) {
     if (isRigthSide) {
         itemToMove.offset({ top: centerY - (itemToMove.height() / 2), left: centerX });
     } else {
-        itemToMove.offset({ top: centerY - (itemToMove.height() / 2), left: centerX - itemToMove.width()});
+        itemToMove.offset({ top: centerY - (itemToMove.height() / 2), left: centerX - itemToMove.width() });
     }
 }
 
