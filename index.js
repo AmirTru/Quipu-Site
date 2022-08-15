@@ -366,9 +366,9 @@ function briefingSectionIn() {
     // theProcess.addClass('research');
     //aling text to dot
     //  theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
-    setToCenter($('.txt').eq(8), $('.process-text').eq(7), false);
-    setToCenter($('.txt').eq(7), $('.process-text').eq(8), false);
-    setToCenter($('.txt').eq(9), $('.process-text').eq(9), false);
+    setToCenter($('.txt').eq(8), processTextWrapper.eq(7), false);
+    setToCenter($('.txt').eq(7), processTextWrapper.eq(8), false);
+    setToCenter($('.txt').eq(9), processTextWrapper.eq(9), false);
     //show text
     processTextWrapper.eq(7).removeClass('hide-process-text');
     processTextWrapper.eq(8).removeClass('hide-process-text');
@@ -381,8 +381,8 @@ function designSectionIn() {
     // theProcess.addClass('research');
     //aling text to dot
     //  theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
-    setToCenter($('.txt').eq(10), $('.process-text').eq(10), true);
-    setToCenter($('.txt').eq(11), $('.process-text').eq(11), true);
+    setToCenter($('.txt').eq(10), processTextWrapper.eq(10), true);
+    setToCenter($('.txt').eq(11), processTextWrapper.eq(11), true);
     //show text
     processTextWrapper.eq(10).removeClass('hide-process-text');
     processTextWrapper.eq(11).removeClass('hide-process-text');
@@ -393,9 +393,9 @@ function developmentSectionIn() {
     // theProcess.addClass('research');
     //aling text to dot
     //  theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
-    setToCenter($('.txt').eq(12), $('.process-text').eq(12), false);
-    setToCenter($('.txt').eq(13), $('.process-text').eq(13), false);
-    setToCenter($('.txt').eq(14), $('.process-text').eq(14), false);
+    setToCenter($('.txt').eq(12), processTextWrapper.eq(12), false);
+    setToCenter($('.txt').eq(13), processTextWrapper.eq(13), false);
+    setToCenter($('.txt').eq(14), processTextWrapper.eq(14), false);
     //show text
     processTextWrapper.eq(12).removeClass('hide-process-text');
     processTextWrapper.eq(13).removeClass('hide-process-text');
