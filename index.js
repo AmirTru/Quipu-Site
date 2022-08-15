@@ -141,7 +141,7 @@ function moveStart(ref) {
     }
     if (ref === "research") {
         if (!theProcess.hasClass('research')); {
-            theProcess.addClass('research');
+         //   theProcess.addClass('research');
             $('.connections-1').removeClass('hide-l');
             $('.grad-l').removeClass('hide');
         }
