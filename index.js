@@ -143,7 +143,7 @@ $(".first-process").each(function (index) {
 //
 gsap.registerPlugin(MotionPathPlugin);
 
-gsap.to("sphere-the-process", {
+gsap.to("#sphere-the-process", {
     duration: 5,
     repeat: 12,
     repeatDelay: 3,
