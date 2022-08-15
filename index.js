@@ -227,9 +227,9 @@ function moveEnd(ref) {
         //   $('.grad-l').removeClass('hide');
     }
     if (ref === "branding") {
-        theProcess.addClass('branding');
-        $('.connections-2').removeClass('hide-r');
-        $('.grad-r').removeClass('hide');
+        // theProcess.addClass('branding');
+        // $('.connections-2').removeClass('hide-r');
+        // $('.grad-r').removeClass('hide');
     }
     if (ref === "briefing") {
         theProcess.addClass('briefing');
