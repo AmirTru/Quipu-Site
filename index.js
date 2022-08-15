@@ -117,7 +117,7 @@ ScrollTrigger.defaults({
   });
   
   // Logo Scale
-  $(".research").each(function (index) {
+  $(".first-process").each(function (index) {
     let triggerElement = $(this);
     let targetElement = theProcess;
   
