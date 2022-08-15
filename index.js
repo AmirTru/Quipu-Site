@@ -150,8 +150,8 @@ gsap.to("#sphere-the-process", {
     yoyo: true,
     ease: "power1.inOut",
     motionPath: {
-        path: "#path1",
-        align: "#path1",
+        path: "/62e7de0bdcaac7a20857b639/62fa95cf30a3f2022154684e_svg-path.svg",
+        align: "/62e7de0bdcaac7a20857b639/62fa95cf30a3f2022154684e_svg-path.svg",
         autoRotate: true,
         alignOrigin: [0.5, 0.5]
     }
