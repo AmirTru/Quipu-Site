@@ -196,7 +196,6 @@ function moveEnd(ref) {
         }
     }
     if (ref === "research") {
-        console.log(ref)
         researchSectionIn();
         //   $('.connections-1').removeClass('hide-l');
         //   $('.grad-l').removeClass('hide');
@@ -347,6 +346,7 @@ processTextWrapper.on('mouseleave', function () {
 });
 
 function researchSectionIn() {
+    console.log(ref)
     //aling text to dot
     setToCenter($('.txt').eq(2), processTextWrapper.eq(0), true);
     setToCenter($('.txt').eq(0), processTextWrapper.eq(1), true);
