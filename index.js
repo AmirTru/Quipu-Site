@@ -131,7 +131,8 @@ ScrollTrigger.defaults({
       }
     });
     tl.from(targetElement, {
-      y: "130%",
+      y: "-90%",
+      width: "100%",
       duration: 1
     });
   });
