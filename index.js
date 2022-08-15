@@ -112,23 +112,24 @@ const PARTICLES_OPTIONS = {
     "retina_detect": true
 }
 
+//scroll
 ScrollTrigger.defaults({
     markers: false
-  });
-  
-  // Logo Scale
-  $(".first-process").each(function (index) {
+});
+
+// Logo Scale
+$(".first-process").each(function (index) {
     let triggerElement = $(this);
     let targetElement = theProcess;
-  
+
     let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: triggerElement,
-        // trigger element - viewport
-        start: "top top",
-        end: "bottom top",
-        scrub: 1
-      }
+        scrollTrigger: {
+            trigger: triggerElement,
+            // trigger element - viewport
+            start: "top top",
+            end: "bottom top",
+            scrub: 1
+        }
     });
     tl.from(targetElement, {
         // width: "100%"
@@ -136,8 +137,25 @@ ScrollTrigger.defaults({
     tl.to(targetElement, {
         scale: 1.3
         //duration: 1
-      });
-  });
+    });
+});
+
+//
+gsap.registerPlugin(MotionPathPlugin);
+
+gsap.to("sphere-the-process", {
+    duration: 5,
+    repeat: 12,
+    repeatDelay: 3,
+    yoyo: true,
+    ease: "power1.inOut",
+    motionPath: {
+        path: "#path1",
+        align: "#path1",
+        autoRotate: true,
+        alignOrigin: [0.5, 0.5]
+    }
+});
 
 
 function moveStart(ref) {
