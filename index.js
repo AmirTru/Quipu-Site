@@ -119,6 +119,7 @@ function moveStart(ref) {
     $('.grad-r').addClass('hide');
     $('.connections-1').addClass('hide-l');
     $('.connections-2').addClass('hide-r');
+    $('.connections-3').addClass('hide-r');
 
     //restore only one class 
     jQuery('#the-process-lottie').attr('class', 'the-process-lottie');
@@ -197,6 +198,7 @@ function moveEnd(ref) {
     }
     if (ref === "briefing") {
         theProcess.addClass('briefing');
+        $('.connections-3').removeClass('hide-r');
         $('.grad-r').removeClass('hide');
     }
     if (ref === "design") {
