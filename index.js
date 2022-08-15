@@ -141,6 +141,7 @@ function moveStart(ref) {
     }
     if (ref === "research") {
         theProcess.addClass('research');
+        $('.connections-1').removeClass('hide-l');
     }
     if (ref === "branding") {
     }
@@ -188,8 +189,8 @@ function moveEnd(ref) {
     }
     if (ref === "research") {   
         
-        $('.connections-1').removeClass('hide-l');
-        $('.grad-l').removeClass('hide');
+     //   $('.connections-1').removeClass('hide-l');
+     //   $('.grad-l').removeClass('hide');
     }
     if (ref === "branding") {
         theProcess.addClass('branding');
