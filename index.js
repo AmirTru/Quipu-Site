@@ -318,7 +318,7 @@ function setToCenter(getCenter, itemToMove, isRigthSide) {
     var centerY = offset.top + height / 2;
 
     if (isRigthSide) {
-        itemToMove.offset({ top: centerY - (itemToMove.height() / 2), left: centerX });
+        itemToMove.offset({ top: centerY - (itemToMove.find('process-text-header').height() / 2), left: centerX });
     } else {
         itemToMove.offset({ top: centerY - (itemToMove.height() / 2), left: centerX - itemToMove.width()});
     }
