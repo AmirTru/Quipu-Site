@@ -131,7 +131,7 @@ ScrollTrigger.defaults({
       }
     });
     tl.from(targetElement, {
-      y: "-90%",
+     
       width: "130%",
       duration: 1
     });
