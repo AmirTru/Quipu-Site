@@ -133,7 +133,7 @@ $(".first-process").each(function (index) {
         },
         motionPath: {
             path: ".path1",
-           // align: "M 400 600 Q 150 500 250 250 Q 400 0 500 0 Q 800 0 700 500 ",
+            // align: "M 400 600 Q 150 500 250 250 Q 400 0 500 0 Q 800 0 700 500 ",
             autoRotate: true,
             //alignOrigin: [0.5, 0.5]
         }
@@ -142,10 +142,13 @@ $(".first-process").each(function (index) {
     tl.from(targetElement, {
         // width: "100%"
     });
-    tl.to(targetElement, {
-        scale: 1.3
-        //duration: 1
-    });
+    tl.to(targetElement, { scale: 1.3 }).to(".sphere-the-process", {
+        motionPath: {
+            path: ".path1",
+            align: ".path1",
+            alignOrigin: [0.5, 0.5],
+        }
+    }, 0)
 });
 
 //
