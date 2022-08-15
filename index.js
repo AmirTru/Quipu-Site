@@ -131,8 +131,7 @@ ScrollTrigger.defaults({
       }
     });
     tl.from(targetElement, {
-      width: "100%",
-      //duration: 1
+   
     });
     tl.to(targetElement, {
         width: "130%",
