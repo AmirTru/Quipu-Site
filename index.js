@@ -320,9 +320,7 @@ function setToCenter(getCenter, itemToMove, isRigthSide) {
     if (isRigthSide) {
         itemToMove.offset({ top: centerY - (itemToMove.height() / 2), left: centerX });
     } else {
-        var parentWidth = itemToMove.offsetParent().width();
-        var percent = 100 * itemToMove.width() / parentWidth;
-        itemToMove.offset({ top: centerY - (itemToMove.height() / 2), left: centerX - itemToMove.width() - (percent * 3) });
+        itemToMove.offset({ top: centerY - (itemToMove.height() / 2), left: centerX - itemToMove.width()});
     }
 }
 
