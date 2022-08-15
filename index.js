@@ -112,6 +112,31 @@ const PARTICLES_OPTIONS = {
     "retina_detect": true
 }
 
+ScrollTrigger.defaults({
+    markers: false
+  });
+  
+  // Logo Scale
+  $(".research").each(function (index) {
+    let triggerElement = $(this);
+    let targetElement = theProcess;
+  
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: triggerElement,
+        // trigger element - viewport
+        start: "top top",
+        end: "bottom top",
+        scrub: 1
+      }
+    });
+    tl.from(targetElement, {
+      y: "130%",
+      duration: 1
+    });
+  });
+
+
 function moveStart(ref) {
     //hide text & scale down "the process"
     processTextWrapper.addClass('hide-process-text');
