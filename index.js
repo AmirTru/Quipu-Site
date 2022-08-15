@@ -140,11 +140,11 @@ function moveStart(ref) {
         }
     }
     if (ref === "research") {
-        if (!theProcess.hasClass('research')); {
-         //   theProcess.addClass('research');
-            $('.connections-1').removeClass('hide-l');
-            $('.grad-l').removeClass('hide');
-        }
+        // if (!theProcess.hasClass('research')); {
+        //  //   theProcess.addClass('research');
+        //   //  $('.connections-1').removeClass('hide-l');
+        //   //  $('.grad-l').removeClass('hide');
+        // }
     }
     if (ref === "branding") {
         if (!theProcess.hasClass('research')); {
