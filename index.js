@@ -131,10 +131,14 @@ ScrollTrigger.defaults({
       }
     });
     tl.from(targetElement, {
-     
-      width: "130%",
+      width: "100%",
       duration: 1
     });
+    tl.to(targetElement, {
+        width: "130%",
+        duration: 1
+      });
+      tl.to
   });
 
 
