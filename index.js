@@ -134,7 +134,7 @@ ScrollTrigger.defaults({
         width: "100%"
     });
     tl.to(targetElement, {
-        width: "130%"
+        width: "150%"
         //duration: 1
       });
   });
