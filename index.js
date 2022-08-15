@@ -113,6 +113,7 @@ const PARTICLES_OPTIONS = {
 }
 
 //scroll
+gsap.registerPlugin(MotionPathPlugin);
 ScrollTrigger.defaults({
     markers: false
 });
@@ -129,7 +130,14 @@ $(".first-process").each(function (index) {
             start: "top top",
             end: "bottom top",
             scrub: 1
+        },
+        motionPath: {
+            path: ".path1",
+           // align: "M 400 600 Q 150 500 250 250 Q 400 0 500 0 Q 800 0 700 500 ",
+            autoRotate: true,
+            //alignOrigin: [0.5, 0.5]
         }
+
     });
     tl.from(targetElement, {
         // width: "100%"
@@ -141,21 +149,21 @@ $(".first-process").each(function (index) {
 });
 
 //
-gsap.registerPlugin(MotionPathPlugin);
 
-gsap.to(".sphere-the-process", {
-    duration: 5,
-    repeat: 12,
-    repeatDelay: 3,
-    yoyo: true,
-    ease: "power1.inOut",
-    motionPath: {
-        path: ".path1",
-       // align: "M 400 600 Q 150 500 250 250 Q 400 0 500 0 Q 800 0 700 500 ",
-        autoRotate: true,
-        //alignOrigin: [0.5, 0.5]
-    }
-});
+
+// gsap.to(".sphere-the-process", {
+//     duration: 5,
+//     repeat: 12,
+//     repeatDelay: 3,
+//     yoyo: true,
+//     ease: "power1.inOut",
+//     motionPath: {
+//         path: ".path1",
+//        // align: "M 400 600 Q 150 500 250 250 Q 400 0 500 0 Q 800 0 700 500 ",
+//         autoRotate: true,
+//         //alignOrigin: [0.5, 0.5]
+//     }
+// });
 
 
 function moveStart(ref) {
