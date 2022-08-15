@@ -170,7 +170,7 @@ function moveEnd(ref) {
     //fire op the text after animathion is iver on the process
     theProcess.on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function (event) {
         if ($('#the-process-lottie').hasClass('research')) {
-            researchSectionIn();
+            //researchSectionIn();
         }
         if ($('#the-process-lottie').hasClass('branding')) {
             brandingSectionIn();
@@ -196,7 +196,7 @@ function moveEnd(ref) {
         }
     }
     if (ref === "research") {
-
+        researchSectionIn();
         //   $('.connections-1').removeClass('hide-l');
         //   $('.grad-l').removeClass('hide');
     }
