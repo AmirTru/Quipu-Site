@@ -114,15 +114,15 @@ const PARTICLES_OPTIONS = {
 
 function moveStart(ref) {
     //hide text & scale down "the process"
-    processTextWrapper.addClass('hide-process-text');
-    $('.grad-l').addClass('hide');
-    $('.grad-r').addClass('hide');
-    $('.connections-1').addClass('hide-l');
-    $('.connections-2').addClass('hide-r');
-    $('.connections-3').addClass('hide-r');
+    // processTextWrapper.addClass('hide-process-text');
+    // $('.grad-l').addClass('hide');
+    // $('.grad-r').addClass('hide');
+    // $('.connections-1').addClass('hide-l');
+    // $('.connections-2').addClass('hide-r');
+    // $('.connections-3').addClass('hide-r');
 
     //restore only one class 
-    jQuery('#the-process-lottie').attr('class', 'the-process-lottie');
+    // jQuery('#the-process-lottie').attr('class', 'the-process-lottie');
 
     // jQuery('#sphere-the-process').attr('class', 'sphere-the-process');
 
